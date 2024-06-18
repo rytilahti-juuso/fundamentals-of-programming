@@ -11,7 +11,7 @@ pages:
   stage: deploy
   script:
     - npm install
-    - npm build:gitlab
+    - npm run build:gitlab
   artifacts:
       paths:
         - public
