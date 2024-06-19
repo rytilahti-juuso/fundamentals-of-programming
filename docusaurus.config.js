@@ -65,17 +65,30 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            type: 'doc',
+            docId: 'Part 1.1 - Introduction',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Introduction',
+          },
+          {
+            type: 'doc',
+            docId: 'part-2/Part 2.1 - Contract-Based Programming',
+            position: 'left',
+            label: 'Part 2',
+          },
+          {
+            type: 'doc',
+            docId: 'part-3/Part 3.1 - Inheritance',
+            position: 'left',
+            label: 'Part 3',
+          },
+          {
+            type: 'doc',
+            docId: 'part-4/Part 4.1 - Object Properties',
+            position: 'left',
+            label: 'Part 4',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'Linkki',
-            position: 'right',
-          },
         ],
       },
       footer: {
@@ -124,6 +137,7 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+  themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 export default config;
