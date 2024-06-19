@@ -8,8 +8,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Course material site demo',
-  tagline: 'Dinosaurs are cool',
+  title: 'Advanced Course in Object Oriented Programming',
+  tagline: 'Welcome to the course!',
   favicon: '/img/favicon.ico',
 
   // Set the production url of your site here
@@ -58,7 +58,7 @@ const config = {
       // Replace with your project's social card
       image: '/img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'Test site for materials :D',
+        title: 'Advanced Course in Object Oriented Programming',
         logo: {
           alt: 'My Site Logo',
           src: 'img/logo.svg',
@@ -114,10 +114,6 @@ const config = {
                 label: 'Discord',
                 href: 'https://discordapp.com/invite/docusaurus',
               },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
             ],
           },
           {
@@ -130,7 +126,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Testisivusto vain. :D Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Turun Yliopisto.`,
       },
       prism: {
         theme: prismThemes.github,
