@@ -78,7 +78,7 @@ In the next example, **`GoodSolution <∶ Solution`**
 Covariance is applied to the type of the return value.
 
 The post-condition is thus tightened; a smaller set for selecting the type of a return value:
-**{Solution, GoodSolution} ⊆ {GoodSolution}**
+**`{Solution, GoodSolution} ⊆ {GoodSolution}`**
 
 ```java
 interface Solution { String giveSolution(); }
@@ -130,7 +130,7 @@ class GreatStudent extends Student {
 }
 ```
 
-The pre-condition clause `instanceof` accepts a wider range of types: **{EasyExercise} ⊇ {Exercise, EasyExercise}**
+The pre-condition clause `instanceof` accepts a wider range of types: **`{EasyExercise} ⊇ {Exercise, EasyExercise}`**
 
 ```java
 interface Exercise { String description(); }
