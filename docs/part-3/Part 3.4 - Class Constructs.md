@@ -150,7 +150,7 @@ redefine previous functionalities.
 - There is no desire to define a new specific class.
 
 Syntax
-- **new Class(arguments) { definitions }**
+- **`new Class(arguments) { definitions }`**
 
 
 ```java
@@ -452,7 +452,7 @@ Use purpose
 - E.g. Serializable messages in a web service between frontend and backend sections.
 
 Syntax
-- **record Class(parameters) { configuration }**
+- **`record Class(parameters) { configuration }`**
 - The list of parameters of the constructor are directly after the class name.
 
 ```java
