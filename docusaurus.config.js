@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Advanced Course in Object Oriented Programming',
   tagline: 'Welcome to the course!',
-  favicon: '/img/favicon.ico',
+  favicon: '/img/favicon-utu.png',
 
   // Set the production url of your site here
   url: 'https://gitlab.utu.fi',
