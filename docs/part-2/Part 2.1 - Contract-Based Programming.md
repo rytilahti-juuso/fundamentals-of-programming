@@ -1,3 +1,7 @@
+---
+description: test description
+---
+
 # Contract-Based Programming / Design
 
 **Methodology** aims for correctness. 

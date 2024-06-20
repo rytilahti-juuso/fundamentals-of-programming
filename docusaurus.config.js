@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Advanced Course in Object Oriented Programming',
-  tagline: 'Welcome to the course!',
+  tagline: 'Welcome to the course materials!',
   favicon: '/img/favicon-utu.png',
 
   // Set the production url of your site here
@@ -60,79 +60,64 @@ const config = {
       navbar: {
         title: 'Advanced Course in Object Oriented Programming',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'UTU Logo',
+          src: 'img/UTU_logo_EN_RGB.png',
+          srcDark: 'img/UTU_logo_EN_RGB_white.png',
         },
         items: [
           {
-            type: 'doc',
-            docId: 'Part 1.1 - Introduction',
+            to: 'docs/Part 1.1 - Introduction',
             position: 'left',
-            label: 'Introduction',
+            label: 'Part 1 - Introduction',
           },
           {
-            type: 'doc',
-            docId: 'part-2/Part 2.1 - Contract-Based Programming',
+            to: 'docs/category/part-2---modularity/',
             position: 'left',
-            label: 'Part 2',
+            label: 'Part 2 - Modularity',
           },
           {
-            type: 'doc',
-            docId: 'part-3/Part 3.1 - Inheritance',
+            to: 'docs/category/part-3---class-structure-and-inheritance',
             position: 'left',
-            label: 'Part 3',
+            label: 'Part 3 - Class Structure and Inheritance',
           },
           {
-            type: 'doc',
-            docId: 'part-4/Part 4.1 - Object Properties',
+            to: 'docs/category/part-4---object-properties-and-data-structure',
             position: 'left',
-            label: 'Part 4',
+            label: 'Part 4 - Object Properties and Data Structure',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
         ],
       },
       footer: {
-        style: 'dark',
+        style: 'light',
+        logo: {
+          alt: 'UTU Logo',
+          src: 'img/UTU_logo_EN_RGB.png',
+          srcDark: 'img/UTU_logo_EN_RGB_white.png',
+          height: 100,
+          width: 260
+        },
+        copyright: `Copyright © ${new Date().getFullYear()} Turun Yliopisto.`,
         links: [
           {
-            title: 'Jotain',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/Part 1.1 - Introduction',
-              },
-            ],
+            label: 'ViLLE',
+            href: 'https://ville.utu.fi',
           },
           {
-            title: 'Ehkä',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-            ],
+            label: 'Open Programming Courses',
+            href: 'https://www.utu.fi/en/open-university-studies/courses/programming-and-databases',
           },
           {
-            title: 'Tänne?',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-            ],
+            label: 'Linkkejä',
+            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
           },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Turun Yliopisto.`,
+        ]
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
     }),
+  themes: ['@docusaurus/theme-live-codeblock'],
 };
 
 export default config;

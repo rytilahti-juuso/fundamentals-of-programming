@@ -4,32 +4,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Tämä',
+    title: 'Welcome',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Intro to the platform :D
       </>
     ),
   },
   {
-    title: 'On',
+    title: 'Timetable',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        This is a self paced course. All the course materials can be found in this site. Please click the above link to start the course.
       </>
     ),
   },
   {
-    title: 'Testidataa',
+    title: 'Exercises',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        There will be exrcises hosted in ViLLE for each part of the course.
       </>
     ),
   },

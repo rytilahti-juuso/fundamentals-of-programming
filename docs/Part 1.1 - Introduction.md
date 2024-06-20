@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Part 1 - Introduction
 ---
 
 # Motivation / Background
