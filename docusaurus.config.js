@@ -57,6 +57,10 @@ const config = {
     ({
       // Replace with your project's social card
       image: '/img/docusaurus-social-card.jpg',
+      colorMode: {
+        defaultMode: 'light',
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Advanced Course in Object Oriented Programming',
         logo: {
@@ -107,8 +111,8 @@ const config = {
             href: 'https://www.utu.fi/en/open-university-studies/courses/programming-and-databases',
           },
           {
-            label: 'Linkkejä',
-            href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            label: 'UTU Website',
+            href: 'https://www.utu.fi/',
           },
         ]
       },

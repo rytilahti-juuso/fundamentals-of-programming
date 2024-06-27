@@ -1,42 +1,46 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import ThemedImage from '@theme/ThemedImage';
 
 const FeatureList = [
   {
     title: 'Welcome',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    img: <img src='img/info.png' width={150} height={150} />,
     description: (
       <>
-        Intro to the platform :D
+        This site is used to house the materials of this course.
+        You can go to the first part of the course by clicking the "Start the course here!" button or you can choose a part form the navigation bar above.
       </>
     ),
   },
   {
     title: 'Timetable',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    img: <img src='img/calendar.png' width={150} height={150} />,
     description: (
       <>
-        This is a self paced course. All the course materials can be found in this site. Please click the above link to start the course.
+        This is a self paced course. All the course materials can be found in this site so you can use the structure to plan your own schedule. More course information can be found from ViLLE.
       </>
     ),
   },
   {
     title: 'Exercises',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    img: <picture>
+      <source srcset='img/info_white.png' media='(prefers-color-scheme: dark)'/>
+      <img src='img/tasks.png' width={150} height={150}/></picture>,
     description: (
       <>
-        There will be exrcises hosted in ViLLE for each part of the course.
+        There will be exercises hosted in ViLLE for each part of the course. Link to ville can be found from the bottom of each page.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({img, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <div>{img}</div>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
