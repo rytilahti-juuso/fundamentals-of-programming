@@ -56,7 +56,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: '',
+      image: 'img/UTU_logo_EN_RGB.png',
       colorMode: {
         defaultMode: 'light',
         respectPrefersColorScheme: true,
