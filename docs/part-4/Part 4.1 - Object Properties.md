@@ -1,3 +1,7 @@
+---
+description: Basic properties of objects.
+---
+
 # Object Properties
 
 Today's Topics:
@@ -656,5 +660,3 @@ record Person(...) implements Comparable<Person> {
     }
 }
 ```
-
-Next up: [Part 4.2 - Data Structures and Algorithms](Part%204.2%20-%20Data%20Structures%20and%20Algorithms.md)

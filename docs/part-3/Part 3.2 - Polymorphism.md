@@ -1,3 +1,7 @@
+---
+description: What is polymorphism and ways to implement it.
+---
+
 # Polymorphism
 
 Today's Topics:
@@ -178,7 +182,3 @@ class String implements CharSequence {..}
 Helper methods can be declared using (`default` & `static` Java8+, `private` Java9+)
 
 Due to interface limitations, implementation relies on public interface or global (`static`) state, not on member variable references.
-
-
-Now continue to:
-[Part 3.3 - Binding - Override and Overload - Exceptions](Part%203.3%20-%20Binding%20-%20Override%20and%20Overload%20-%20Exceptions.md)

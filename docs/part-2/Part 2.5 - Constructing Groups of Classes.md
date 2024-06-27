@@ -1,3 +1,6 @@
+---
+description: How to construct groups of classes.
+---
 
 # Constructing groups of classes
 

@@ -1,3 +1,7 @@
+---
+description: Generics and polymorphism.
+---
+
 # Generics
 
 ## Today's Topics:
@@ -346,5 +350,3 @@ T t = new T();  // Cannot instantiate, T's concrete type is
                 // not fully known at runtime
 }
 ```
-
-Next up: [Part 4.5 - Generics and Variance](Part%204.5%20-%20Generics%20and%20Variance.md)

@@ -1,3 +1,7 @@
+---
+description: Class creation.
+---
+
 # Creating a class
 
 Now we're moving finally to emphasize the object oriented programming. 
@@ -493,3 +497,7 @@ private final List<Contact> contacts = new ArrayList<>();
 As an additional exercise, you may try now implementing the phonebook class fully.
 
 One additional benefit in using interfaces is that it reduces the need to manually write code, as the method signature's etc. can be automatically generated/copied with modern IDE's.
+
+# End of Part 2
+
+This is the end of part 2 of the course now you can do the exercises related to this part in ViLLE and continue to part 3.

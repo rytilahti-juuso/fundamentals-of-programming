@@ -1,3 +1,7 @@
+---
+description: Different methods of binding explained.
+---
+
 # Binding
 
 Today's Topics:
@@ -99,7 +103,7 @@ System.out.printf(
 a.s, b.s, a.d(), b.d());
 ```
 
-## Option 1: static binding
+## Option 1: Static binding
 
 - Dispatch strategy chosen at compile time
 - The compiler cannot know the dynamic type of the variable `a.s`
@@ -314,6 +318,3 @@ void logReader() {
     }
 }
 ```
-
-Next topic is:
-[Part 3.4 - Class Constructs](Part%203.4%20-%20Class%20Constructs.md)

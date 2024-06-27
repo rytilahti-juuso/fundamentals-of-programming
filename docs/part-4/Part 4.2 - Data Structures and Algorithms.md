@@ -1,3 +1,7 @@
+---
+description: Different collections in java.
+---
+
 # Data Structures and Algorithms
 
 ## Today's Topics:
@@ -283,7 +287,4 @@ Example: Implement a ring buffer
     - Consider how to make the collection operate without memory allocations after initialization (Java allocates memory with the **new** keyword).
 - Example: Implement a mapping that duplicates values with respect to the mirror image of the key
     - **`Map<Integer, X>`**, where each key-value pair **`(Y, X)`** duplicates to position **`(-Y, X)`**.
-
-
-Next up: [Part 4.3 - Data types and variance](Part%204.3%20-%20Data%20types%20and%20variance.md)
 

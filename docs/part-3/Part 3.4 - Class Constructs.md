@@ -1,3 +1,7 @@
+---
+description: Most used types of classes in java.
+---
+
 # Class constructs
 
 Today's Topics:
@@ -552,4 +556,6 @@ have different subtype but the same base type.
 - Formerly: imitated (to a limited extent) with a static inner class with a `private` constructor.
 
 
-Now do the exercises of the Part 3 in ViLLE and continue to Part 4.
+# End of Part 3
+
+This is the end of part 3 of the course now you can do the exercises related to this part in ViLLE and continue to part 4.

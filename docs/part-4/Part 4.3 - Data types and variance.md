@@ -1,3 +1,7 @@
+---
+description: Variance rules and subtyping. 
+---
+
 # Data types and variance
 
 Todays topics
@@ -186,5 +190,3 @@ Note! also via inclusion, **`A <∶ B ⇒ E(A) ⊆ E(B)`**, i.e. can not raise n
 
 Below is an overview of different types of variance.
 ![](/img/part-15/invariance.PNG)
-
-Next up: [Part 4.4 - Generics](Part%204.4%20-%20Generics.md)

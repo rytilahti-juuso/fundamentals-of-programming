@@ -1,3 +1,7 @@
+---
+description: Routine construction and specification.
+---
+
 # Constructing routines
 
 Today’s topics

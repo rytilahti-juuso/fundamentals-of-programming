@@ -1,3 +1,7 @@
+---
+description: What are side-effects and how to approach them.
+---
+
 # Side-effects
 
 ## What are side-effects?

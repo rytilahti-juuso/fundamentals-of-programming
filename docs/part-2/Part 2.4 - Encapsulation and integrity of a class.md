@@ -1,3 +1,7 @@
+---
+description: Encapsulation, class protection and integrity.
+---
+
 # Encapsulation and integrity of a class
 
 Today's Topics:

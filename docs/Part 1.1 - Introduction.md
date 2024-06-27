@@ -16,6 +16,7 @@ This course uses Java, a language you have used in previous courses and is quite
 Java has been around for a long time (often IT products become obsolete in less than 5 years). Java is also a reasonably good teaching language. Additionally, Java is still under active development and have gained quite good features recently.  For example, take a look at [differences between Java 8 and Java 21](https://javaalmanac.io/jdk/21/apidiff/8/).
 
 Screenshot from a [news website](https://www.itpro.com/software/development/java-is-here-to-stay-popular-programming-language-to-remain-on-business-hit-lists-in-2024):
+
 ![](/img/introduction/java_is_here_to_stay.png)
 
 

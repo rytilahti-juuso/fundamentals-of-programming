@@ -1,3 +1,7 @@
+---
+description: Generics with inheritance and regarding to contracts. 
+---
+
 # Generics and variance
 
 ## Today's topics:
@@ -503,5 +507,6 @@ Size number = new Size(1);
 number = number.sum( new Size(2) );
 System.out.println( number.value() );
 ```
+# End of Part 4
 
-Congratulations  on reaching the final part of the study material for this course. Now all that is left is the part 4 exercises and after that the exam, both in ViLLE.
+Congratulations on reaching the final part of the study material for this course. Now all that is left is the part 4 exercises and after that the exam, both in ViLLE.

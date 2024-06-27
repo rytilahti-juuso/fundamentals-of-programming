@@ -1,5 +1,5 @@
 ---
-description: test description
+description: Intro to contract-based programming and how it is used in this course.
 ---
 
 # Contract-Based Programming / Design

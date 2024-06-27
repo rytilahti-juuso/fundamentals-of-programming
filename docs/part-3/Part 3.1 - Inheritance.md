@@ -1,3 +1,7 @@
+---
+description: Philosophy and charasteristics of inheritance. 
+---
+
 # Inheritance
 
 Today's Topics:
@@ -382,6 +386,3 @@ gameObject.toggleState() // gameObject.state <- true
 gameObject.printState() // prints "true"
 gameObject.gameMethod() // prints "ok"
 ```
-
-Next, continue to:
-[Part 3.2 - Polymorphism](Part%203.2%20-%20Polymorphism.md)
