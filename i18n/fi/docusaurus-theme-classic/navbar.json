@@ -1,0 +1,26 @@
+{
+  "title": {
+    "message": "Olio-ohjelmoinnin jatkokurssi",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "UTU Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Part 1 - Introduction": {
+    "message": "Osa 1 - Johdanto",
+    "description": "Navbar item with label Part 1 - Introduction"
+  },
+  "item.label.Part 2 - Modularity": {
+    "message": "Osa 2 - Modulaarisuus",
+    "description": "Navbar item with label Part 2 - Modularity"
+  },
+  "item.label.Part 3 - Class Structure and Inheritance": {
+    "message": "Osa 3 - Luokanmuodostus ja perintä",
+    "description": "Navbar item with label Part 3 - Class Structure and Inheritance"
+  },
+  "item.label.Part 4 - Object Properties and Data Structure": {
+    "message": "Osa 4 - Olion perusominaisuudet ja tietorakenteet",
+    "description": "Navbar item with label Part 4 - Object Properties and Data Structure"
+  }
+}

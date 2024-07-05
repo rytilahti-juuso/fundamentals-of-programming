@@ -1,0 +1,22 @@
+{
+  "link.item.label.ViLLE": {
+    "message": "ViLLE",
+    "description": "The label of footer link with label=ViLLE linking to https://ville.utu.fi"
+  },
+  "link.item.label.Open Programming Courses": {
+    "message": "Avoimet ohjelmoinnin kurssit",
+    "description": "The label of footer link with label=Open Programming Courses linking to https://www.utu.fi/en/open-university-studies/courses/programming-and-databases"
+  },
+  "link.item.label.UTU Website": {
+    "message": "UTU Verkkosivu",
+    "description": "The label of footer link with label=UTU Website linking to https://www.utu.fi/"
+  },
+  "copyright": {
+    "message": "Copyright © 2024 Turun Yliopisto.",
+    "description": "The footer copyright"
+  },
+  "logo.alt": {
+    "message": "UTU Logo",
+    "description": "The alt text of footer logo"
+  }
+}
