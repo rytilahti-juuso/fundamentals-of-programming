@@ -55,14 +55,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/UTU_logo_EN_RGB.png',
       colorMode: {
         defaultMode: 'light',
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Advanced Course in Object Oriented Programming',
+        title: 'Course Material site',
         logo: {
           alt: 'UTU Logo',
           src: 'img/UTU_logo_EN_RGB.png',
@@ -72,22 +71,7 @@ const config = {
           {
             to: 'docs/Part 1.1 - Introduction',
             position: 'left',
-            label: 'Part 1 - Introduction',
-          },
-          {
-            to: 'docs/category/part-2---modularity/',
-            position: 'left',
-            label: 'Part 2 - Modularity',
-          },
-          {
-            to: 'docs/category/part-3---class-structure-and-inheritance',
-            position: 'left',
-            label: 'Part 3 - Class Structure and Inheritance',
-          },
-          {
-            to: 'docs/category/part-4---object-properties-and-data-structure',
-            position: 'left',
-            label: 'Part 4 - Object Properties and Data Structure',
+            label: 'Material',
           },
           {
             type: 'localeDropdown',

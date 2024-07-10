@@ -4,27 +4,11 @@
     "description": "The label for version current"
   },
   "sidebar.mySidebar.category.Part 2 - Modularity": {
-    "message": "Osa 2 - Modulaarisuus",
+    "message": "Osa 2 - Kansiorakenne",
     "description": "The label for category Part 2 - Modularity in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Part 2 - Modularity.link.generated-index.description": {
-    "message": "Osassa 2 käsitellään seuraavia aiheita:",
+    "message": "Osa 2 on esimerkki kansiorakenteesta:",
     "description": "The generated-index page description for category Part 2 - Modularity in sidebar mySidebar"
-  },
-  "sidebar.mySidebar.category.Part 3 - Class Structure and Inheritance": {
-    "message": "Osa 3 - Luokanmuodostus ja periytyminen",
-    "description": "The label for category Part 3 - Class Structure and Inheritance in sidebar mySidebar"
-  },
-  "sidebar.mySidebar.category.Part 3 - Class Structure and Inheritance.link.generated-index.description": {
-    "message": "Osassa 3 käsitellään seuraavia aiheita:",
-    "description": "The generated-index page description for category Part 3 - Class Structure and Inheritance in sidebar mySidebar"
-  },
-  "sidebar.mySidebar.category.Part 4 - Object Properties and Data Structure": {
-    "message": "Osa 4 - Olioiden perusominaisuudet ja tietorakenteet.",
-    "description": "The label for category Part 4 - Object Properties and Data Structure in sidebar mySidebar"
-  },
-  "sidebar.mySidebar.category.Part 4 - Object Properties and Data Structure.link.generated-index.description": {
-    "message": "Osassa 4 käsitellään seuraavia aiheita:",
-    "description": "The generated-index page description for category Part 4 - Object Properties and Data Structure in sidebar mySidebar"
   }
 }

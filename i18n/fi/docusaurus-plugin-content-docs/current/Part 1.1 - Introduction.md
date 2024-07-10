@@ -5,9 +5,7 @@ title: Osa 1 - Johdanto
 
 # Motivaatio / Taustaa
 
-Software is everywhere, amount of software keeps increasing. Additionally, software seems generally to be becoming bigger and more complex. This raises questions like: Do software work correctly? Are they usable? Programming is about coding, but what about software production?
-
-The course also helps understand the big picture of programming. Object oriented programming is not a perfect solution, not even close, but deepening your knowledge about OO also strengthens your knowledge and understanding. This can also help you figure out if some other (e.g. more functional) approach would be a better option. 
+Tässä esimerkki suomeksi käännetystä sivusta. Kaikkea ei ole käännetty, mutta tämä ensimmäinen kappale demoaa käännöstä.
 
 ## Java ohjelmointikieli
 
