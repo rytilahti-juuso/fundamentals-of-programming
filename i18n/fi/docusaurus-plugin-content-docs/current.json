@@ -3,12 +3,12 @@
     "message": "Seuraava",
     "description": "The label for version current"
   },
-  "sidebar.mySidebar.category.Part 2 - Modularity": {
+  "sidebar.mySidebar.category.Part 2 - Example of a folder structure": {
     "message": "Osa 2 - Kansiorakenne",
-    "description": "The label for category Part 2 - Modularity in sidebar mySidebar"
+    "description": "The label for category Part 2 - Example of a folder structure in sidebar mySidebar"
   },
-  "sidebar.mySidebar.category.Part 2 - Modularity.link.generated-index.description": {
+  "sidebar.mySidebar.category.Part 2 - Example of a folder structure.link.generated-index.description": {
     "message": "Osa 2 on esimerkki kansiorakenteesta:",
-    "description": "The generated-index page description for category Part 2 - Modularity in sidebar mySidebar"
+    "description": "The generated-index page description for category Part 2 - Example of a folder structure in sidebar mySidebar"
   }
 }
