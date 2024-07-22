@@ -69,7 +69,7 @@ const config = {
         },
         items: [
           {
-            to: 'docs/Part 1.1 - Introduction',
+            to: 'docs/Week1-Intro-to-programming/intro-programming-and-code.md',
             position: 'left',
             label: 'Material',
           },
