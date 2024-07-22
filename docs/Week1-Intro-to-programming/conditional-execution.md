@@ -8,7 +8,7 @@ Earlier, it was mentioned that the programmer can influence the order in which t
 
 A **block** refers to one or more related lines of code. In Python, a block is denoted by indenting the lines belonging to the block at the same level. The indentation is done using either spaces or a tabulator (tab key).
 
-![Tab key](/static/img/img-en/w1-4.png)
+![Tab key](/img/img-en/w1-4.png)
 
 The block to be conditionally executed is implemented with an **if-statement**. The grammar of the conditional clause looks like this:
 
