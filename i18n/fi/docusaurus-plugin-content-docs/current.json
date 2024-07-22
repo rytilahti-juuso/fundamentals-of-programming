@@ -3,12 +3,60 @@
     "message": "Seuraava",
     "description": "The label for version current"
   },
-  "sidebar.mySidebar.category.Part 2 - Example of a folder structure": {
-    "message": "Osa 2 - Kansiorakenne",
-    "description": "The label for category Part 2 - Example of a folder structure in sidebar mySidebar"
+  "sidebar.mySidebar.category.Week 1 - Introduction to programming": {
+    "message": "Viikko 1 - Johdanto ohjelmointiin",
+    "description": "The label for category Week 1 - Introduction to programming in sidebar mySidebar"
   },
-  "sidebar.mySidebar.category.Part 2 - Example of a folder structure.link.generated-index.description": {
-    "message": "Osa 2 on esimerkki kansiorakenteesta:",
-    "description": "The generated-index page description for category Part 2 - Example of a folder structure in sidebar mySidebar"
+  "sidebar.mySidebar.category.Week 1 - Introduction to programming.link.generated-index.description": {
+    "message": "Week 1 covers the following topics:",
+    "description": "The generated-index page description for category Week 1 - Introduction to programming in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 2 - More conditions, repetition": {
+    "message": "Viikko 2 - Lisää ehtoja, Toistolause",
+    "description": "The label for category Week 2 - More conditions, repetition in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 2 - More conditions, repetition.link.generated-index.description": {
+    "message": "Week 2 covers the following topics:",
+    "description": "The generated-index page description for category Week 2 - More conditions, repetition in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 3 - More repetition, strings, own functions": {
+    "message": "Viikko 3 - Lisää toistoa, merkkijonot, oma funktio",
+    "description": "The label for category Week 3 - More repetition, strings, own functions in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 3 - More repetition, strings, own functions.link.generated-index.description": {
+    "message": "Week 3 covers the following topics:",
+    "description": "The generated-index page description for category Week 3 - More repetition, strings, own functions in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 4 - More functions and intro to lists": {
+    "message": "Viikko 4 - Lisää funktioita, Johdatus listoihin",
+    "description": "The label for category Week 4 - More functions and intro to lists in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 4 - More functions and intro to lists.link.generated-index.description": {
+    "message": "Week 4 covers the following topics:",
+    "description": "The generated-index page description for category Week 4 - More functions and intro to lists in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 5 - More on data structures": {
+    "message": "Viikko 5 - Lisää tietorakenteista",
+    "description": "The label for category Week 5 - More on data structures in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 5 - More on data structures.link.generated-index.description": {
+    "message": "Week 5 covers the following topics:",
+    "description": "The generated-index page description for category Week 5 - More on data structures in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 6 - Files and Errors": {
+    "message": "Viikko 6 - Tiedostot ja virheet",
+    "description": "The label for category Week 6 - Files and Errors in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 6 - Files and Errors.link.generated-index.description": {
+    "message": "Week 6 covers the following topics:",
+    "description": "The generated-index page description for category Week 6 - Files and Errors in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 7 - Libraries and more Python": {
+    "message": "Viikko 7 - Kirjastot ja lisää Pythonia",
+    "description": "The label for category Week 7 - Libraries and more Python in sidebar mySidebar"
+  },
+  "sidebar.mySidebar.category.Week 7 - Libraries and more Python.link.generated-index.description": {
+    "message": "Week 7 covers the following topics:",
+    "description": "The generated-index page description for category Week 7 - Libraries and more Python in sidebar mySidebar"
   }
 }
