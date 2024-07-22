@@ -19,7 +19,7 @@ if <condition>:
 
 In a conditional clause, the nested block after the condition is only executed when the condition is true. If the condition is false, the block is skipped entirely:
 
-![Condition chart](/static/img/img-en/w1-5.png)
+![Condition chart](/img/img-en/w1-5.png)
 
 This time, let's look at condition forming using the equality operator. The operator can be used to check whether the value of one clause is exactly the same as the value of another clause. In practice, we start by checking whether a variable has exactly the desired value. The operator consists of two equal signs - this is because it is different from the variable setting operator.
 

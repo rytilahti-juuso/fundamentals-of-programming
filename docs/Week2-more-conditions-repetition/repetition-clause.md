@@ -38,7 +38,7 @@ Thanks and bye!
 
 The repetition of a phrase is similar in syntax to a condition clause. The only difference is that the block following the repeat clause is executed over and over again as long as the condition is true:
 
-![Condition clause chart](/static/img/img-en/w2-2.png)
+![Condition clause chart](/img/img-en/w2-2.png)
 
 The **break** clause inside the repeat clause immediately terminates the repeat (i.e. the loop execution). Playback continues after the break statement from the next statement in the loop block. If there are no more statements after the loop block, the program execution terminates completely.
 

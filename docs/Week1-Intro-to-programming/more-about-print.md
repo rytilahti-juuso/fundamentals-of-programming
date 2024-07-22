@@ -6,7 +6,7 @@ sidebar_position: 2
 
 In the previous examples, a **string** was printed on the screen. A string, as the name implies, is a string of zero or more characters, such as a word or a natural language sentence. However, an alternative way of expressing a print string is to give, for example, a mathematical expression. The expression consists of operands and operators:
 
-![Math expression](/static/img/img-en/w1-2.png)
+![Math expression](/img/img-en/w1-2.png)
 
 For example:
 

@@ -33,7 +33,7 @@ else:
 
 The optional else-branch is written after the block following the if-statement, so the else-branch cannot occur without an if-statement preceding it. The idea is that in each case one of the blocks is executed.
 
-![condition blocks](/static/img/img-en/w2-1.png)
+![condition blocks](/img/img-en/w2-1.png)
 
 The previous example, implemented using the else branch, would look like this:
 

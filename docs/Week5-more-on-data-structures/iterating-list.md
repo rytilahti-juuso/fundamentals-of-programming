@@ -41,7 +41,7 @@ for <variable> in <data structure>:
 
 The idea is that in a for loop, all elements are extracted one by one in order from the data structure and set to the value of a given variable. The following diagram illustrates how the loop works:
 
-![For-loop diagram](/static/img/img-en/w5-1.png)
+![For-loop diagram](/img/img-en/w5-1.png)
 
 Consider the previous example, where the elements of a list are printed one by one, now implemented with a for statement:
 

@@ -12,7 +12,7 @@ Let's start with the situation where we create a new list and store a reference 
 numbers = [1, 2, 3, 5, 4]
  ```
 
-![Variable](/static/img/img-en/w5-4.png)
+![Variable](/img/img-en/w5-4.png)
 
 Now let's set the value of the variable **numbers** to the variable **numbers2**. Since the value is actually *a reference*, the reference, not the list, is copied when setting.
 
@@ -21,7 +21,7 @@ numbers = [1, 2, 3, 5, 4]
 numbers2 = numbers
  ```
 
-![Reference illustration](/static/img/img-en/w5-5.png)
+![Reference illustration](/img/img-en/w5-5.png)
 
 Now we have two variables, both pointing to the same list. So the list can be manipulated by either variable:
 
@@ -36,7 +36,7 @@ print(numbers)
 print(numbers2)
  ```
 
-![Manipulation example](/static/img/img-en/w5-6.png)
+![Manipulation example](/img/img-en/w5-6.png)
 
 Program outputs:
 ```

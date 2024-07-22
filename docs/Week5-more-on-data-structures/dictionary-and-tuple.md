@@ -10,7 +10,7 @@ A dictionary is a data structure where keys point to elements. The elements are 
 
 The following figure illustrates the dictionary: the student numbers point to the names of the students.
 
-![Dictionary illustration](/static/img/img-en/w5-3.png)
+![Dictionary illustration](/img/img-en/w5-3.png)
 
 ## Dictionary in Python
 

@@ -8,7 +8,7 @@ In general, the user must be able to influence the execution of the program. Typ
 
 The basic principle can be described as follows:
 
-![Input principle](/static/img/img-en/w1-3.png)
+![Input principle](/img/img-en/w1-3.png)
 
 In Python, we can read the user's textual input (usually from the keyboard) with an input function. The function is given a prompt (i.e. text that instructs the user to enter the correct type of value) as a parameter and returns a value, which is usually stored in a variable.
 

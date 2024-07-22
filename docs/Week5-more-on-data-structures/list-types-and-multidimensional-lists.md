@@ -55,7 +55,7 @@ The elements of a list can also be other lists. This is actually a clever way to
 
 For example, the following matrix
 
-![3x3 matrix image](/static/img/img-en/w5-2.png)
+![3x3 matrix image](/img/img-en/w5-2.png)
 
 could be saved as a list this way:
 

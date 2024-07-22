@@ -43,7 +43,7 @@ XXXXXXXX
 
 In general, the repetition clause can be described by the following graph, already presented last time:
 
-![Condition clause graph](/static/img/img-en/w2-2.png)
+![Condition clause graph](/img/img-en/w2-2.png)
 
 For example, a loop that prints all numbers between 1 and 19 every two steps might look like this:
 

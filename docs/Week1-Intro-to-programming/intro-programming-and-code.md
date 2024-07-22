@@ -30,7 +30,7 @@ def best_result(results: list) -> dict:
 
 After a program is written it can be **executed**. Before executing the program must be (usually) converted to an executable format. For example, the Python programming language used on this course functions so, that first the program is **translated** to a language which the Python-**interpreter** understands and then the interpreter runs the translated program.
 
-![Running code visualization](/static/img/img-en/w1-1.png)
+![Running code visualization](/img/img-en/w1-1.png)
 
 Execution is performed in a so-called virtual machine. Instead of every program being written separately for each operating system, writing one virtual machine for each of them is sufficient. This way the same Python program can be run in numerous various environments.
 

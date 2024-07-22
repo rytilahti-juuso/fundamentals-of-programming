@@ -41,7 +41,7 @@ All characters in a string have an index (i.e. an ordinal number). The index can
 
 In Python, as in most other programming languages, indexing usually starts from zero. This means that the first character of the string is at index zero. Similarly, the last character of a string is at the index (string length minus one):
 
-![String indexes](/static/img/img-en/w3-1.png)
+![String indexes](/img/img-en/w3-1.png)
 
 A single character can be referred to by a hook closure notation. Hash brackets are written after a string variable or string constant. The index of the character to be returned is written inside the square brackets.
 
@@ -129,7 +129,7 @@ IndexError: string index out of range
 
 In Python, characters can also be referred to using negative indices. An index of -1 indicates the last character in the queue, -2 the second-to-last character in the queue, and so on:
 
-![Negative indexes](/static/img/img-en/w3-2.png)
+![Negative indexes](/img/img-en/w3-2.png)
 
 Each character in the string therefore has two indices: positive and negative. The last character in the string can be referred to either by its length or by using a negative index:
 
@@ -160,7 +160,7 @@ When extracting a sub-string, it is important to remember that the character cor
 
 For example, if the string "Pekka Python" were taken as a substring between indices 3 and 8...
 
-![Specific indices](/static/img/img-en/w3-3.png)
+![Specific indices](/img/img-en/w3-3.png)
 
 ...the result would be the substring "ka Py":
 
