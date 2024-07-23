@@ -8,7 +8,7 @@
     "description": "The label for category Week 1 - Introduction to programming in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 1 - Introduction to programming.link.generated-index.description": {
-    "message": "Week 1 covers the following topics:",
+    "message": "Viikolla 1 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 1 - Introduction to programming in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 2 - More conditions, repetition": {
@@ -16,7 +16,7 @@
     "description": "The label for category Week 2 - More conditions, repetition in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 2 - More conditions, repetition.link.generated-index.description": {
-    "message": "Week 2 covers the following topics:",
+    "message": "Viikolla 2 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 2 - More conditions, repetition in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 3 - More repetition, strings, own functions": {
@@ -24,7 +24,7 @@
     "description": "The label for category Week 3 - More repetition, strings, own functions in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 3 - More repetition, strings, own functions.link.generated-index.description": {
-    "message": "Week 3 covers the following topics:",
+    "message": "Viikolla 3 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 3 - More repetition, strings, own functions in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 4 - More functions and intro to lists": {
@@ -32,7 +32,7 @@
     "description": "The label for category Week 4 - More functions and intro to lists in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 4 - More functions and intro to lists.link.generated-index.description": {
-    "message": "Week 4 covers the following topics:",
+    "message": "Viikolla 4 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 4 - More functions and intro to lists in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 5 - More on data structures": {
@@ -40,7 +40,7 @@
     "description": "The label for category Week 5 - More on data structures in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 5 - More on data structures.link.generated-index.description": {
-    "message": "Week 5 covers the following topics:",
+    "message": "Viikolla 5 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 5 - More on data structures in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 6 - Files and Errors": {
@@ -48,7 +48,7 @@
     "description": "The label for category Week 6 - Files and Errors in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 6 - Files and Errors.link.generated-index.description": {
-    "message": "Week 6 covers the following topics:",
+    "message": "Viikolla 6 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 6 - Files and Errors in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 7 - Libraries and more Python": {
@@ -56,7 +56,7 @@
     "description": "The label for category Week 7 - Libraries and more Python in sidebar mySidebar"
   },
   "sidebar.mySidebar.category.Week 7 - Libraries and more Python.link.generated-index.description": {
-    "message": "Week 7 covers the following topics:",
+    "message": "Viikolla 7 käsitellään seuraavia aiheita:",
     "description": "The generated-index page description for category Week 7 - Libraries and more Python in sidebar mySidebar"
   }
 }
