@@ -1,11 +1,6 @@
 ---
 sidebar_position: 1
 ---
-<style type="text/css">
-  img {
-    background-color: #ffff;
-  }
-</style>
 
 # Introduction: Programming and code
 

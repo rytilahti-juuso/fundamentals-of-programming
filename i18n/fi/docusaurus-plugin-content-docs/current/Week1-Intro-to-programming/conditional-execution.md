@@ -1,11 +1,6 @@
 ---
 sidebar_position: 5
 ---
-<style type="text/css">
-  img {
-    background-color: #ffff;
-  }
-</style>
 
 # Ehdollinen suoritus
 

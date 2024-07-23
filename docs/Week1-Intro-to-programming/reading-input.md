@@ -1,11 +1,6 @@
 ---
 sidebar_position: 4
 ---
-<style type="text/css">
-  img {
-    background-color: #ffff;
-  }
-</style>
 
 # Reading input
 
