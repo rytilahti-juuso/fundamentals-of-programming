@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Advanced Course in Object Oriented Programming',
+  title: 'Basics of programming!',
   tagline: 'Welcome to the course materials!',
   favicon: '/img/favicon-utu.png',
 
