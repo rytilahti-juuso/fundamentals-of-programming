@@ -1,6 +1,11 @@
 ---
 sidebar_position: 2
 ---
+<style type="text/css">
+  img {
+    background-color: #ffff;
+  }
+</style>
 
 # More about the print clause
 
