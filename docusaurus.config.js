@@ -61,7 +61,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Course Material site',
+        title: 'Basics of programming',
         logo: {
           alt: 'UTU Logo',
           src: 'img/UTU_logo_EN_RGB.png',
