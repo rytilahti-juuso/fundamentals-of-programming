@@ -110,7 +110,9 @@ const config = {
       },
     }),
   themes: ['@docusaurus/theme-live-codeblock'],
-  plugins: [require.resolve('docusaurus-lunr-search')],
+  plugins: [[require.resolve('docusaurus-lunr-search'), {
+    languages: ['en', 'fi']
+  }]],
 };
 
 export default config;
