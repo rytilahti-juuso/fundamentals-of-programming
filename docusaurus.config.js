@@ -110,6 +110,7 @@ const config = {
       },
     }),
   themes: ['@docusaurus/theme-live-codeblock'],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 };
 
 export default config;
