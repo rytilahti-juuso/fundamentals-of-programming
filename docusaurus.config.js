@@ -16,12 +16,12 @@ const config = {
   url: 'https://gitlab.utu.fi',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/ohpe-test-site/',
+  baseUrl: '/fundamentals-of-programming/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'njmett', // Usually your GitHub org/user name.
-  projectName: 'ohpe-test-site', // Usually your repo name.
+  organizationName: 'open-programming', // Usually your GitHub org/user name.
+  projectName: 'fundamentals-of-programming', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
