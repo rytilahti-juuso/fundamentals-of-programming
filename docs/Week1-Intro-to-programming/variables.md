@@ -1,6 +1,8 @@
 ---
 sidebar_position: 3
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Variables
 
@@ -28,27 +30,35 @@ pnumber = "099-1234 567" # a phone number is a string, too
 
 The program initializes three variables, and stores a different value for each. The value of a variable can be returned by referring to the variable name:
 
-```python 
-# Initialize variables
-name = "Peter Python"
-age = 22
-shoe_size = 39
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # Initialize variables
+    name = "Peter Python"
+    age = 22
+    shoe_size = 39
 
-# Print name
-print(name)
+    # Print name
+    print(name)
 
-# Comma works in a print clause now, too
-print("I am", age, "ýears old")
+    # Comma works in a print clause now, too
+    print("I am", age, "ýears old")
 
-print("My shoe size is", shoe_size)
- ```
+    print("My shoe size is", shoe_size)
+    ```
 
-Ohjelma tulostaa:
-```
-Peter Python
-I am 22 years old 
-My shoe size is 39
- ```
+    Program Outputs:
+    ```
+    Peter Python
+    I am 22 years old 
+    My shoe size is 39
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Initialize%20variables%0Aname%20%3D%20%22Peter%20Python%22%0Aage%20%3D%2022%0Ashoe_size%20%3D%2039%0A%0A%23%20Print%20name%0Aprint%28name%29%0A%0A%23%20Comma%20works%20in%20a%20print%20clause%20now,%20too%0Aprint%28%22I%20am%22,%20age,%20%22%C3%BDears%20old%22%29%0A%0Aprint%28%22My%20shoe%20size%20is%22,%20shoe_size%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
+
 ## Naming variables
 
 The aim is to name the variables in such a way that the purpose of the data stored in the variable is clear from the name.
@@ -150,43 +160,59 @@ Name is Kim Python
 
 However, the string and the number cannot be combined and an error message is displayed:
 
-```python 
-divided = 10
-divider = 2.5
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    divided = 10
+    divider = 2.5
 
-division = divided / divider
-print(division)
+    division = divided / divider
+    print(division)
 
-# This raises an error
-# For example, the parts to be printed should be separated by a comma instead of the + operator
-print("Result is " + division)
- ```
+    # This raises an error
+    # For example, the parts to be printed should be separated by a comma instead of the + operator
+    print("Result is " + division)
+    ```
 
-The final output of the program:
-``` 
-4.0
+    The final output of the program:
+    ``` 
+    4.0
 
-Traceback (most recent call last):
-  File "example.py", line 8, in <module>
-    print("Result is " + division)
-TypeError: must be str, not float
- ```
+    Traceback (most recent call last):
+        File "example.py", line 8, in <module>
+            print("Result is " + division)
+    TypeError: must be str, not float
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=divided%20%3D%2010%0Adivider%20%3D%202.5%0A%0Adivision%20%3D%20divided%20/%20divider%0Aprint%28division%29%0A%0A%23%20This%20raises%20an%20error%0A%23%20For%20example,%20the%20parts%20to%20be%20printed%20should%20be%20separated%20by%20a%20comma%20instead%20of%20the%20%2B%20operator%0Aprint%28%22Result%20is%20%22%20%2B%20division%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
+
 
 However, numbers can be printed with strings in the same print statement by separating the objects to be printed with commas. Note, however, that a comma adds an extra space to the printout:
 
-```python 
-divided = 10
-divider = 2.5
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    divided = 10
+    divider = 2.5
 
-division = divided / divider
+    division = divided / divider
 
-# This works
-print("Result is ", division)
+    # This works
+    print("Result is ", division)
 
-print("When we calculate", divided, " / ", divider, "the result will be", division)
- ```
+    print("When we calculate", divided, " / ", divider, "the result will be", division)
+    ```
 
-Output:
-``` 
-Result is 4.0
-When we calculate 10  /  2.5 the result will be 4.0
+    Output:
+    ``` 
+    Result is 4.0
+    When we calculate 10  /  2.5 the result will be 4.0
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=divided%20%3D%2010%0Adivider%20%3D%202.5%0A%0Adivision%20%3D%20divided%20/%20divider%0A%0A%23%20This%20works%0Aprint%28%22Result%20is%20%22,%20division%29%0A%0Aprint%28%22When%20we%20calculate%22,%20divided,%20%22%20/%20%22,%20divider,%20%22the%20result%20will%20be%22,%20division%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
