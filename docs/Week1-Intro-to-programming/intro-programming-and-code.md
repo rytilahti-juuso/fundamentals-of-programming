@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Introduction: Programming and code
 
@@ -65,23 +67,38 @@ The print statements of the program are therefore executed in the given order fr
 
 The next program prints a recipe on the screen:
 
-```python 
-print("A simple soup")
+:::info
 
-print("Potatoes")
-print("Water")
+For some code examples it is possible to view a visualization of the program generated in pythontutor.com. This allows to view the execution line by line so the logic behind the code is more easily undestandable.
 
-print("Instructions:")
-print("Mix and heat.")
- ```
+Example of this is always behind a Visualization-tab like in the below example.
 
-Program outputs
-```
-A simple soup
-Potatoes
-Water
-Instructions:
-Mix and heat.
- ```
+:::
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    print("A simple soup")
+
+    print("Potatoes")
+    print("Water")
+
+    print("Instructions:")
+    print("Mix and heat.")
+    ```
+
+    Program outputs
+    ```
+    A simple soup
+    Potatoes
+    Water
+    Instructions:
+    Mix and heat.
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=print%28%22A%20simple%20soup%22%29%0A%0Aprint%28%22Potatoes%22%29%0Aprint%28%22Water%22%29%0A%0Aprint%28%22Instructions%3A%22%29%0Aprint%28%22Mix%20and%20heat.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 The order in which commands are executed can be changed using different control structures. However, we will come back to these later.
