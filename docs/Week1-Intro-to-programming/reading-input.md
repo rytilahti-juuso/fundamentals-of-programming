@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Reading input
 
@@ -13,27 +15,34 @@ The basic principle can be described as follows:
 In Python, we can read the user's textual input (usually from the keyboard) with an input function. The function is given a prompt (i.e. text that instructs the user to enter the correct type of value) as a parameter and returns a value, which is usually stored in a variable.
 
 Consider an example where the program asks for the user's name and then prints a greeting:
-```python 
-# Let's ask for a name and then save it in the variable "name"
-name = input("Input your name: ")
 
-# Let's print the greeting
-print("Hello there, " + name + "!")
- ```
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # Let's ask for a name and then save it in the variable "name"
+    name = input("Input your name: ")
 
-Example performance:
-```
-Input your name: Paula Python
-Hello there, Paula Python!
- ```
+    # Let's print the greeting
+    print("Hello there, " + name + "!")
+    ```
 
-The same program run on a different input will, of course, give a different result:
+    Example performance:
+    ```
+    Input your name: Paula Python
+    Hello there, Paula Python!
+    ```
+    The same program run on a different input will, of course, give a different result:
 
-Example performance:
-```
-Input your name: Jack Java
-Hello there, Jack Java!
- ```
+    Example performance:
+    ```
+    Input your name: Jack Java
+    Hello there, Jack Java!
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Let's%20ask%20for%20a%20name%20and%20then%20save%20it%20in%20the%20variable%20%22name%22%0Aname%20%3D%20input%28%22Input%20your%20name%3A%20%22%29%0A%0A%23%20Let's%20print%20the%20greeting%0Aprint%28%22Hello%20there,%20%22%20%2B%20name%20%2B%20%22!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 The second example asks the user separately for their first name, last name and phone number and then prints a greeting.
 
@@ -74,25 +83,32 @@ The sum of numbers is 58
 
 A string type value can be **converted** to an integer type number by using the function **int**. This is how it works:
 
-```python 
-# Number inside string
-s = "5"
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # Number inside string
+    s = "5"
 
-# Now the plus operator concatenates the strings into a new string
-print(s + s)
+    # Now the plus operator concatenates the strings into a new string
+    print(s + s)
 
-# Convert to number
-number = int(s)
+    # Convert to number
+    number = int(s)
 
-# Now the plus operator adds numbers
-print(number + number)
- ```
+    # Now the plus operator adds numbers
+    print(number + number)
+    ```
 
-Program outputs:
-``` 
-55
-10
- ```
+    Program outputs:
+    ``` 
+    55
+    10
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Number%20inside%20string%0As%20%3D%20%225%22%0A%0A%23%20Now%20the%20plus%20operator%20concatenates%20the%20strings%20into%20a%20new%20string%0Aprint%28s%20%2B%20s%29%0A%0A%23%20Convert%20to%20number%0Anumber%20%3D%20int%28s%29%0A%0A%23%20Now%20the%20plus%20operator%20adds%20numbers%0Aprint%28number%20%2B%20number%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Now we can fix the previous program so that the addition works correctly
 
