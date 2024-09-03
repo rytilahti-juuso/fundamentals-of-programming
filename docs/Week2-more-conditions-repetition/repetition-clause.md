@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Repetition clause
 
@@ -35,6 +37,15 @@ Number 2 squared is 4
 Give a number: 0
 Thanks and bye!
  ```
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 The repetition of a phrase is similar in syntax to a condition clause. The only difference is that the block following the repeat clause is executed over and over again as long as the condition is true:
 
@@ -78,6 +89,15 @@ Number is now 309
 Number is now 310
  ```
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 The second example program asks the user one by one for a string and a number. The program prints the number of strings corresponding to the number until the user enters an empty string. Notice from the example that Python allows the string to be multiplied by an integer - for example, "A" * 3 produces a new string "AAA".
 
 ```python 
@@ -104,3 +124,12 @@ Give an amount: 3
 moimoimoi
 Give a string:
  ```
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
