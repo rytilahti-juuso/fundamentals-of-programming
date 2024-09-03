@@ -8,7 +8,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Basics of programming!',
+  title: 'Fundamentals of Programming!',
   tagline: 'Welcome to the course materials!',
   favicon: '/img/favicon-utu.png',
 
@@ -61,7 +61,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Basics of programming',
+        title: 'Fundamentals of Programming',
         logo: {
           alt: 'UTU Logo',
           src: 'img/UTU_logo_EN_RGB.png',
