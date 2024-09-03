@@ -14,7 +14,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          <Translate>Basics of programming</Translate>
+          <Translate>Fundamentals of Programming</Translate>
         </Heading>
         <p className="hero__subtitle"><Translate>Welcome to the course materials!</Translate></p>
         <div className={styles.buttons}>
@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="Course materials for the Basics of programming course.">
+      description="Course materials for the Fundamentals of Programming course.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
