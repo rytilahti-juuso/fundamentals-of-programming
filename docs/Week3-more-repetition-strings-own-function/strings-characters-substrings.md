@@ -10,30 +10,37 @@ As stated earlier, a string is a sequence of zero, one or more characters. The c
 
 The number of characters found in the string can be returned by the **len** function. For example:
 
-```python 
-str = "Hi"
-print(len(str))
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    str = "Hi"
+    print(len(str))
 
-name = "Pete Python"
-print(len(name))
+    name = "Pete Python"
+    print(len(name))
 
-# All characters, including spaces are included in the length
-str2 = "a b c d"
+    # All characters, including spaces are included in the length
+    str2 = "a b c d"
 
-length = len(str2)
-print(length)
+    length = len(str2)
+    print(length)
 
-# Empty string's length is zero
-print(len(""))
- ```
+    # Empty string's length is zero
+    print(len(""))
+    ```
 
-Program outputs:
-```
-2
-11
-7
-0
- ```
+    Program outputs:
+    ```
+    2
+    11
+    7
+    0
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=str%20%3D%20%22Hi%22%0Aprint%28len%28str%29%29%0A%0Aname%20%3D%20%22Pete%20Python%22%0Aprint%28len%28name%29%29%0A%0A%23%20All%20characters,%20including%20spaces%20are%20included%20in%20the%20length%0Astr2%20%3D%20%22a%20b%20c%20d%22%0A%0Alength%20%3D%20len%28str2%29%0Aprint%28length%29%0A%0A%23%20Empty%20string's%20length%20is%20zero%0Aprint%28len%28%22%22%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 So the function takes a string as a parameter and returns information about its length -. so the value returned is zero or a positive integer.
 
@@ -49,58 +56,72 @@ A single character can be referred to by a hook closure notation. Hash brackets 
 
 For example
 
-```python 
-name = "Pekka Python"
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    name = "Pekka Python"
 
-# first character
-print("First:", name[0])
+    # first character
+    print("First:", name[0])
 
-# third character
-print("Third:", name[2])
+    # third character
+    print("Third:", name[2])
 
-# first, second and third character
-print("First, second, third:", name[0] + name[1] + name[2])
+    # first, second and third character
+    print("First, second, third:", name[0] + name[1] + name[2])
 
-# The character can also be extracted from the string standard
-print("abcdef"[2])
- ```
+    # The character can also be extracted from the string standard
+    print("abcdef"[2])
+    ```
 
-Program outputs:
+    Program outputs:
 
-``` 
-First: P
-Third: k
-First, second, third: Pek
-c
- ```
+    ``` 
+    First: P
+    Third: k
+    First, second, third: Pek
+    c
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=name%20%3D%20%22Pekka%20Python%22%0A%0A%23%20first%20character%0Aprint%28%22First%3A%22,%20name%5B0%5D%29%0A%0A%23%20third%20character%0Aprint%28%22Third%3A%22,%20name%5B2%5D%29%0A%0A%23%20first,%20second%20and%20third%20character%0Aprint%28%22First,%20second,%20third%3A%22,%20name%5B0%5D%20%2B%20name%5B1%5D%20%2B%20name%5B2%5D%29%0A%0A%23%20The%20character%20can%20also%20be%20extracted%20from%20the%20string%20standard%0Aprint%28%22abcdef%22%5B2%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 The following program prints the first and last characters of the string entered by the user:
 
-```python 
-while True:
-    s = input("Give a string, empty quits: ")
-    if s == "":
-        break
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    while True:
+        s = input("Give a string, empty quits: ")
+        if s == "":
+            break
 
-    print("1st character:", s[0])
+        print("1st character:", s[0])
 
-    # last character is at the index of length minus one
-    print("Final character:", s[len(s) - 1])
- ```
+        # last character is at the index of length minus one
+        print("Final character:", s[len(s) - 1])
+    ```
 
-Example execution
-``` 
-Give a string, empty quits: Hello
-1st character: H
-Final character: o
-Give a string, empty quits: Goodbye
-1st character: G
-Final character: e
-Give a string, empty quits: Thanks a lot!
-1st character: T
-Final character: !
-Give a string, empty quits:
- ```
+    Example execution
+    ``` 
+    Give a string, empty quits: Hello
+    1st character: H
+    Final character: o
+    Give a string, empty quits: Goodbye
+    1st character: G
+    Final character: e
+    Give a string, empty quits: Thanks a lot!
+    1st character: T
+    Final character: !
+    Give a string, empty quits:
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20s%20%3D%20input%28%22Give%20a%20string,%20empty%20quits%3A%20%22%29%0A%20%20%20%20if%20s%20%3D%3D%20%22%22%3A%0A%20%20%20%20%20%20%20%20break%0A%0A%20%20%20%20print%28%221st%20character%3A%22,%20s%5B0%5D%29%0A%0A%20%20%20%20%23%20last%20character%20is%20at%20the%20index%20of%20length%20minus%20one%0A%20%20%20%20print%28%22Final%20character%3A%22,%20s%5Blen%28s%29%20-%201%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Note that if an attempt is made to reference a character that is not in the string, an error message will result:
 
@@ -166,58 +187,80 @@ For example, if the string "Pekka Python" were taken as a substring between indi
 
 ...the result would be the substring "ka Py":
 
-```python 
-name = "Pekka Python"
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    name = "Pekka Python"
 
-substring = name[3:8]
+    substring = name[3:8]
 
-print(substring)
- ```
+    print(substring)
+    ```
 
-Program outputs:
-```
-ka Py
- ```
+    Program outputs:
+    ```
+    ka Py
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=name%20%3D%20%22Pekka%20Python%22%0A%0Asubstring%20%3D%20name%5B3%3A8%5D%0A%0Aprint%28substring%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 More examples of substring extraction:
 
-```python 
-alphabets = "ABCDEFGHIJKL"
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    alphabets = "ABCDEFGHIJKL"
 
-start = alphabets[0:5]
-end = alphabets[7:12]
-middle = alphabets[3:9]
+    start = alphabets[0:5]
+    end = alphabets[7:12]
+    middle = alphabets[3:9]
 
-print(start)
-print(end)
-print(middle)
- ```
+    print(start)
+    print(end)
+    print(middle)
+    ```
 
-Program outputs:
-```
-ABCDE
-HIJKL
-DEFGHI
- ```
+    Program outputs:
+    ```
+    ABCDE
+    HIJKL
+    DEFGHI
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=alphabets%20%3D%20%22ABCDEFGHIJKL%22%0A%0Astart%20%3D%20alphabets%5B0%3A5%5D%0Aend%20%3D%20alphabets%5B7%3A12%5D%0Amiddle%20%3D%20alphabets%5B3%3A9%5D%0A%0Aprint%28start%29%0Aprint%28end%29%0Aprint%28middle%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Unlike when extracting a character, it is allowed to refer to an index in a substring that is not found in the string. In this case, however, the substring may contain a smaller number of characters than expected:
-```python 
-name = "Leila"
 
-index = 0
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    name = "Leila"
 
-while index < len(name):
-    part_name = name[index: index + 3]
-    print(part_name)
+    index = 0
 
-    index += 1
- ```
+    while index < len(name):
+        part_name = name[index: index + 3]
+        print(part_name)
 
-Program outputs:
-```
-Lei
-eil
-ila
-la
-a
- ```
+        index += 1
+    ```
+
+    Program outputs:
+    ```
+    Lei
+    eil
+    ila
+    la
+    a
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=name%20%3D%20%22Leila%22%0A%0Aindex%20%3D%200%0A%0Awhile%20index%20%3C%20len%28name%29%3A%0A%20%20%20%20part_name%20%3D%20name%5Bindex%3A%20index%20%2B%203%5D%0A%20%20%20%20print%28part_name%29%0A%0A%20%20%20%20index%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>

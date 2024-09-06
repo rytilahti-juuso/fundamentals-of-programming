@@ -70,27 +70,34 @@ Hello!
 
 Once defined, the function can be called several times. In fact, one typical use for functions is to write frequently needed code as a function - in this case, the same code snippet can easily be executed multiple times.
 
-```python 
-def greet():
-    print("Hello!")
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    def greet():
+        print("Hello!")
 
 
-# Let's call the function several times
-greet()
-greet()
-greet()
-greet()
-greet()
- ```
+    # Let's call the function several times
+    greet()
+    greet()
+    greet()
+    greet()
+    greet()
+    ```
 
-Program outputs:
-```
-Hello!
-Hello!
-Hello!
-Hello!
-Hello!
- ```
+    Program outputs:
+    ```
+    Hello!
+    Hello!
+    Hello!
+    Hello!
+    Hello!
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20greet%28%29%3A%0A%20%20%20%20print%28%22Hello!%22%29%0A%0A%0A%23%20Let's%20call%20the%20function%20several%20times%0Agreet%28%29%0Agreet%28%29%0Agreet%28%29%0Agreet%28%29%0Agreet%28%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Let's look at another example where the function print_menu is defined. As its name implies, the program prints a menu that instructs the user to select the correct function from the program:
 ```python 
@@ -144,61 +151,75 @@ TypeError: shout() missing 1 required positional argument: 'message'
 
 A parameter is given a value by typing it inside parentheses in the function call. This mechanism is familiar from calls to functions such as input and len:
 
-```python 
-def shout(message):
-    # Print the message and exclamation marks
-    print(message + "!!!")
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    def shout(message):
+        # Print the message and exclamation marks
+        print(message + "!!!")
 
 
-# Work with a parameter
-shout("Hi")
+    # Work with a parameter
+    shout("Hi")
 
-# Let's shout something else
-shout("Helloyello")
+    # Let's shout something else
+    shout("Helloyello")
 
-# Parameter can be a phrase
-shout("Hi " + "to " + "everyone")
- ```
+    # Parameter can be a phrase
+    shout("Hi " + "to " + "everyone")
+    ```
 
-Program outputs:
-```
-Hi!!!
-Helloyello!!!
-Hi to everyone!!!
- ```
+    Program outputs:
+    ```
+    Hi!!!
+    Helloyello!!!
+    Hi to everyone!!!
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20shout%28message%29%3A%0A%20%20%20%20%23%20Print%20the%20message%20and%20exclamation%20marks%0A%20%20%20%20print%28message%20%2B%20%22!!!%22%29%0A%0A%0A%23%20Work%20with%20a%20parameter%0Ashout%28%22Hi%22%29%0A%0A%23%20Let's%20shout%20something%20else%0Ashout%28%22Helloyello%22%29%0A%0A%23%20Parameter%20can%20be%20a%20phrase%0Ashout%28%22Hi%20%22%20%2B%20%22to%20%22%20%2B%20%22everyone%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 From the above, we see that the string output by the function now depends on the value of the parameter. Thus, the function may produce a different result for different calls.
 
 Let's look at another example where the parameter of the function is an integer. Let's define a function `output_several` with a single parameter `amount` and test the performance of the function with a few different parameter values:
 
-```python 
-def output_several(amount):
-    index = 0
-    while index < amount:
-        print("Goodbye!")
-        index += 1
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    def output_several(amount):
+        index = 0
+        while index < amount:
+            print("Goodbye!")
+            index += 1
 
 
-# Let's first print thrice
-output_several(3)
+    # Let's first print thrice
+    output_several(3)
 
-print("That was brilliant.")
-print("Again five times:")
+    print("That was brilliant.")
+    print("Again five times:")
 
-# ...and then five times
-output_several(5)
- ```
+    # ...and then five times
+    output_several(5)
+    ```
 
-Program outputs:
-``` 
-Goodbye!
-Goodbye!
-Goodbye!
-That was brilliant.
-Again five times:
-Goodbye!
-Goodbye!
-Goodbye!
-Goodbye!
-Goodbye!
- ```
+    Program outputs:
+    ``` 
+    Goodbye!
+    Goodbye!
+    Goodbye!
+    That was brilliant.
+    Again five times:
+    Goodbye!
+    Goodbye!
+    Goodbye!
+    Goodbye!
+    Goodbye!
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=def%20output_several%28amount%29%3A%0A%20%20%20%20index%20%3D%200%0A%20%20%20%20while%20index%20%3C%20amount%3A%0A%20%20%20%20%20%20%20%20print%28%22Goodbye!%22%29%0A%20%20%20%20%20%20%20%20index%20%2B%3D%201%0A%0A%0A%23%20Let's%20first%20print%20thrice%0Aoutput_several%283%29%0A%0Aprint%28%22That%20was%20brilliant.%22%29%0Aprint%28%22Again%20five%20times%3A%22%29%0A%0A%23%20...and%20then%20five%20times%0Aoutput_several%285%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>

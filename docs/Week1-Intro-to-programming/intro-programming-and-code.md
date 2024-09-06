@@ -69,7 +69,7 @@ The next program prints a recipe on the screen:
 
 :::info
 
-For some code examples it is possible to view a visualization of the program generated in pythontutor.com. This allows to view the execution line by line so the logic behind the code is more easily undestandable.
+For some code examples it is possible to view a visualization of the program generated in pythontutor.com. This allows to view the execution line by line so the logic behind the code is more easily undestandable. Some instances may open the visaulization in a new tab on pythontutor.com.
 
 Example of this is always behind a Visualization-tab like in the below example.
 
