@@ -1,6 +1,17 @@
 ---
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 # Conditions in a repetition clause
 
@@ -13,6 +24,15 @@ In such a loop, its execution is terminated by a break statement. This type of r
 A repetiton clause can also be directly written with a more versatile condition that must hold for the loop to be executed.
 
 For example
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 width = 1
@@ -27,7 +47,7 @@ while width <= 8:
     # is the same as  
     # width = width + 1
     width += 1
- ```
+```
 
 Program outputs:
 ```
@@ -46,6 +66,15 @@ In general, the repetition clause can be described by the following graph, alrea
 ![Condition clause graph](/img/img-en/w2-2.png)
 
 For example, a loop that prints all numbers between 1 and 19 every two steps might look like this:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 num = 1
@@ -71,6 +100,15 @@ Program outputs:
  ```
 Note that such a loop has three parts: initialization, condition and change:
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 # 1. INITIALIZATION
 # Initialise the variable(s) to be used in the condition clause
@@ -90,6 +128,15 @@ while num <= 19:
 If any part is incorrect, an unintended perpetual loop can be created.
 
 For example, the following program will not terminate until the user presses CTRL + C or otherwise forcibly terminates the execution of the program because the programmer has placed the increment of the variable inside the conditional clause.
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 counter = 1
@@ -121,6 +168,15 @@ Below are two alternatives for a program that prints information about the even 
 
 Initially, a version that uses a "perpetual" loop and a break clause:
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 while True:
     num = int(input("Give a number: "))
@@ -134,6 +190,15 @@ while True:
  ```
 
 Then the same program where the condition is written in the while statement:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 num = int(input("Give a number: "))
