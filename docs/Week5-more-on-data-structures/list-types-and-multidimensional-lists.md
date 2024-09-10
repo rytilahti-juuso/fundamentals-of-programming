@@ -21,35 +21,42 @@ repeated_year = [False, False, False, True, True, False]
 
 Python syntax allows you to store different types of values in the same list. However, this is usually a bad idea, as it can lead to various error situations. In general, the elements of a list should all be of the same type.
 
-```python 
-# List, with mixed values
-mixedlist = [10, 20, "Matt", 4.55, True, "Lisa", False]
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # List, with mixed values
+    mixedlist = [10, 20, "Matt", 4.55, True, "Lisa", False]
 
-# List iteration and print is doable
-for element in mixedlist:
-    print(element)
+    # List iteration and print is doable
+    for element in mixedlist:
+        print(element)
 
-# This produces an error
-for element in mixedlist:
-    print(element + 10)
- ```
+    # This produces an error
+    for element in mixedlist:
+        print(element + 10)
+    ```
 
-Program outputs:
-```
-10
-20
-Matt
-4.55
-True
-Lisa
-False
-20
-30
-Traceback (most recent call last):
-  File "mixedlist.py", line 10, in <module>
-    print(element + 10)
-TypeError: must be str, not int
- ```
+    Program outputs:
+    ```
+    10
+    20
+    Matt
+    4.55
+    True
+    Lisa
+    False
+    20
+    30
+    Traceback (most recent call last):
+        File "mixedlist.py", line 10, in <module>
+            print(element + 10)
+        TypeError: must be str, not int
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20List,%20with%20mixed%20values%0Amixedlist%20%3D%20%5B10,%2020,%20%22Matt%22,%204.55,%20True,%20%22Lisa%22,%20False%5D%0A%0A%23%20List%20iteration%20and%20print%20is%20doable%0Afor%20element%20in%20mixedlist%3A%0A%20%20%20%20print%28element%29%0A%0A%23%20This%20produces%20an%20error%0Afor%20element%20in%20mixedlist%3A%0A%20%20%20%20print%28element%20%2B%2010%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 ## List inside list
 
@@ -67,20 +74,27 @@ matrix = [[5, 7, 3], [8, 4, 2], [6, 9, 1]]
 
 Now, from the list that models the matrix, individual elements can be extracted by referring first to a row and then to an element, as shown in the following example:
 
-```python 
-matrix = [[5, 7, 3], [8, 4, 2], [6, 9, 1]]
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    matrix = [[5, 7, 3], [8, 4, 2], [6, 9, 1]]
 
-print("First row, first element:", matrix[0][0])
-print("Second row, third element:", matrix[1][2])
-print("Third row, second element:", matrix[2][1])
- ```
+    print("First row, first element:", matrix[0][0])
+    print("Second row, third element:", matrix[1][2])
+    print("Third row, second element:", matrix[2][1])
+    ```
 
-Program outputs:
-``` 
-First row, first element: 5
-Second row, third element: 2
-Thrid row, second element: 9
- ```
+    Program outputs:
+    ``` 
+    First row, first element: 5
+    Second row, third element: 2
+    Thrid row, second element: 9
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=matrix%20%3D%20%5B%5B5,%207,%203%5D,%20%5B8,%204,%202%5D,%20%5B6,%209,%201%5D%5D%0A%0Aprint%28%22First%20row,%20first%20element%3A%22,%20matrix%5B0%5D%5B0%5D%29%0Aprint%28%22Second%20row,%20third%20element%3A%22,%20matrix%5B1%5D%5B2%5D%29%0Aprint%28%22Third%20row,%20second%20element%3A%22,%20matrix%5B2%5D%5B1%5D%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 
 Let's look at another example:
@@ -126,45 +140,59 @@ Which row (-1 quits): -1
 
 The matrix can be iterated through using two for loops:
 
-```python 
-matrix = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    matrix = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]
 
-# Iterate through all rows
-for row in matrix:
-    # Iterate through all row's elements
-    for element in row:
-        print(element)
- ```
+    # Iterate through all rows
+    for row in matrix:
+        # Iterate through all row's elements
+        for element in row:
+            print(element)
+    ```
 
-Program outputs:
-```
-1
-2
-3
-6
-5
-4
-9
-7
-8
- ```
+    Program outputs:
+    ```
+    1
+    2
+    3
+    6
+    5
+    4
+    9
+    7
+    8
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=matrix%20%3D%20%5B%5B1,%202,%203%5D,%5B6,%205,%204%5D,%5B9,%207,%208%5D%5D%0A%0A%23%20Iterate%20through%20all%20rows%0Afor%20row%20in%20matrix%3A%0A%20%20%20%20%23%20Iterate%20through%20all%20row's%20elements%0A%20%20%20%20for%20element%20in%20row%3A%0A%20%20%20%20%20%20%20%20print%28element%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Similarly, the values of the matrix elements can be changed by using the range function with the for loop:
 
-```python 
-matrix = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    matrix = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]
 
-# Iterate through all rows
-for i in range(len(matrix)):
-    # Iterate through all row's elements
-    for j in range(len(matrix[i])):
-        # Increase element's value by one
-        matrix[i][j] += 1
+    # Iterate through all rows
+    for i in range(len(matrix)):
+        # Iterate through all row's elements
+        for j in range(len(matrix[i])):
+            # Increase element's value by one
+            matrix[i][j] += 1
 
-print(matrix)
- ```
+    print(matrix)
+    ```
 
-Program outputs:
-```
-[[2, 3, 4], [7, 6, 5], [10, 8, 9]]
- ```
+    Program outputs:
+    ```
+    [[2, 3, 4], [7, 6, 5], [10, 8, 9]]
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=matrix%20%3D%20%5B%5B1,%202,%203%5D,%5B6,%205,%204%5D,%5B9,%207,%208%5D%5D%0A%0A%23%20Iterate%20through%20all%20rows%0Afor%20i%20in%20range%28len%28matrix%29%29%3A%0A%20%20%20%20%23%20Iterate%20through%20all%20row's%20elements%0A%20%20%20%20for%20j%20in%20range%28len%28matrix%5Bi%5D%29%29%3A%0A%20%20%20%20%20%20%20%20%23%20Increase%20element's%20value%20by%20one%0A%20%20%20%20%20%20%20%20matrix%5Bi%5D%5Bj%5D%20%2B%3D%201%0A%0Aprint%28matrix%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>

@@ -26,6 +26,15 @@ students = {}
 
 Values can be stored in the dictionary using the same escape notation as in the lists. Add a few values to the dictionary and see what it looks like:
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 students = {}
 
