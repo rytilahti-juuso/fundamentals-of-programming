@@ -40,6 +40,15 @@ In Python, you can prepare for various errors by using the **try-except** struct
 
 Consider the previous example, where the program is prepared for an error of the ValueError type when parsing a string into a number:
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 try:
     age = int(input("Enter your age: "))
@@ -63,6 +72,15 @@ Age must be given as a number!
 If an error occurs in the try block, and an except block corresponding to the error is defined, execution will be moved to the except block as soon as the error occurs.
 
 Another example where an OSError type error is expected when reading a file, for example, if the file is not found:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 try:
@@ -104,6 +122,15 @@ Error caused by an attempt to divide by zero. Typically, an error may occur, for
 Errors result from an attempt to reference an element that does not exist in the data structure being processed. Typical examples are, for example, using too large an index to refer to a character in a string or a list element, or trying to retrieve a dictionary element with a key that does not exist.
 
 Note that multiple errors can be caught by writing multiple except blocks after the try block:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 while True:

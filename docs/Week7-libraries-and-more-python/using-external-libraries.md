@@ -30,6 +30,15 @@ from random import randint
 
 The following example uses the random library function `randint(start: int, end: int)`, which returns a random integer between [start, end]. Note that in this case, the start and end points are also included in the range:
 
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 import random
 
