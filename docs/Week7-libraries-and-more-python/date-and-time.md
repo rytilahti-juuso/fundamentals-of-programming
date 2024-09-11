@@ -18,32 +18,39 @@ from datetime import datetime
 
 so that when referring to a class, you don't have to write datetime.datetime.
 
-```python 
-from datetime import datetime
+ <Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    from datetime import datetime
 
-# Current date
-today = datetime.now()
-print(today)
+    # Current date
+    today = datetime.now()
+    print(today)
 
-# Christmas 2022
-# Values in order of year, month, day
-# Default time is midnight
-christmas = datetime(2022, 12, 24)
-print(christmas)
+    # Christmas 2022
+    # Values in order of year, month, day
+    # Default time is midnight
+    christmas = datetime(2022, 12, 24)
+    print(christmas)
 
-# Last tutorial
-# Time can be given in addition to date
-# first the hours and then the minutes
-last_tuto = datetime(2022, 12, 9, 14, 15)
-print(last_tuto)
- ```
+    # Last tutorial
+    # Time can be given in addition to date
+    # first the hours and then the minutes
+    last_tuto = datetime(2022, 12, 9, 14, 15)
+    print(last_tuto)
+    ```
 
-Example execution:
-```
-2023-02-23 15:28:51.715194
-2022-12-24 00:00:00
-2022-12-09 14:15:00
- ```
+    Example execution:
+    ```
+    2023-02-23 15:28:51.715194
+    2022-12-24 00:00:00
+    2022-12-09 14:15:00
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20datetime%20import%20datetime%0A%0A%23%20Current%20date%0Atoday%20%3D%20datetime.now%28%29%0Aprint%28today%29%0A%0A%23%20Christmas%202022%0A%23%20Values%20in%20order%20of%20year,%20month,%20day%0A%23%20Default%20time%20is%20midnight%0Achristmas%20%3D%20datetime%282022,%2012,%2024%29%0Aprint%28christmas%29%0A%0A%23%20Last%20tutorial%0A%23%20Time%20can%20be%20given%20in%20addition%20to%20date%0A%23%20first%20the%20hours%20and%20then%20the%20minutes%0Alast_tuto%20%3D%20datetime%282022,%2012,%209,%2014,%2015%29%0Aprint%28last_tuto%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 From the example, you can see that printing a datetime-type entity with a print statement does not produce a very clean result. The object has a strftime method that can be used to print the desired time constants. The following list shows some useful formulations understood by the method:
 
@@ -79,53 +86,76 @@ Christmas eve is on the 12. months 24. day
 
 an entity of type datetime can be asked separately for different time limits, as shown in the following example. All methods return an integer.
 
-```python 
-from datetime import datetime
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    from datetime import datetime
 
-# Nykyinen päivämäärä
-today = datetime.now()
+    # Current date
+    today = datetime.now()
 
-print("Year:", today.year)
-print("Month:", today.month)
-print("Day:", today.day)
-print("Hour:", today.hour)
-print("Minutes:", today.minute)
-print("Seconds:", today.second)
- ```
+    print("Year:", today.year)
+    print("Month:", today.month)
+    print("Day:", today.day)
+    print("Hour:", today.hour)
+    print("Minutes:", today.minute)
+    print("Seconds:", today.second)
+    ```
 
-Example execution:
-```
-Year: 2023
-Month: 02
-Day: 23
-Hours: 15
-Minutes: 41
-Seconds: 7
- ```
+    Example execution:
+    ```
+    Year: 2023
+    Month: 02
+    Day: 23
+    Hours: 15
+    Minutes: 41
+    Seconds: 7
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20datetime%20import%20datetime%0A%0A%23%20Nykyinen%20p%C3%A4iv%C3%A4m%C3%A4%C3%A4r%C3%A4%0Atoday%20%3D%20datetime.now%28%29%0A%0Aprint%28%22Year%3A%22,%20today.year%29%0Aprint%28%22Month%3A%22,%20today.month%29%0Aprint%28%22Day%3A%22,%20today.day%29%0Aprint%28%22Hour%3A%22,%20today.hour%29%0Aprint%28%22Minutes%3A%22,%20today.minute%29%0Aprint%28%22Seconds%3A%22,%20today.second%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Times can be compared using the normal comparing operators
 
-```python 
-from datetime import datetime
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    from datetime import datetime
 
-# current date
-today = datetime.now()
+    # current date
+    today = datetime.now()
 
-# christmas
-christmas = datetime(2022, 12, 24)
+    # christmas
+    christmas = datetime(2022, 12, 24)
 
-if today > christmas:
-    print("Christmas came and went")
-else:
-    print("Christmas is coming")
- ```
+    if today > christmas:
+        print("Christmas came and went")
+    else:
+        print("Christmas is coming")
+    ```
 
-Example execution (23.02.2023):
-```
-Christmas came and went
- ```
+    Example execution (23.02.2023):
+    ```
+    Christmas came and went
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20datetime%20import%20datetime%0A%0A%23%20current%20date%0Atoday%20%3D%20datetime.now%28%29%0A%0A%23%20christmas%0Achristmas%20%3D%20datetime%282022,%2012,%2024%29%0A%0Aif%20today%20%3E%20christmas%3A%0A%20%20%20%20print%28%22Christmas%20came%20and%20went%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Christmas%20is%20coming%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 The difference between the periods can also be calculated as a normal deduction. However, the result is a timedelta-type object. The object is used as shown in the example below:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 from datetime import datetime
@@ -144,6 +174,15 @@ print(f"...or more accurately {sub.seconds} seconds.")
  ```
 
 If necessary, you can create a timedelta-olio yourself. However, the object must be accessed with an import statement. Once the object has been created, it can be used to "rotate" the datetime object, i.e. move time forward or backward:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 from datetime import datetime, timedelta
