@@ -125,41 +125,39 @@ Note that multiple errors can be caught by writing multiple except blocks after 
 
 <Tabs>
   <TabItem value="code" label="Code Example" default>
+    ```python 
+    while True:
+        try:
+            num1 = int(input("Dividend: "))
+            if num1 == 0:
+                break
+            num2 = int(input("Divisor:   "))
+            print(f"{num1} divided by {num2} is {num1 / num2}")
+        # Prepare for wrong number format
+        except ValueError:
+            print("Numbers must be given in numerical form!")
+        except ZeroDivisionError:
+            print("Can't divide by zero!")
+    ```
 
+    Example execution:
+    ``` 
+    Dividend: 5
+    Divisor:   2
+    5 divided by 2 is 2.5
+    Dividend: 10
+    Divisor:  three
+    Numbers must be given in numerical form!
+    Dividend: 4
+    Divisor:   0
+    Can't divide by zero!
+    Dividend: 0
+    ```    
   </TabItem>
   <TabItem value="Visualization" label="Visualization">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20num1%20%3D%20int%28input%28%22Dividend%3A%20%22%29%29%0A%20%20%20%20%20%20%20%20if%20num1%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20num2%20%3D%20int%28input%28%22Divisor%3A%20%20%20%22%29%29%0A%20%20%20%20%20%20%20%20print%28f%22%7Bnum1%7D%20divided%20by%20%7Bnum2%7D%20is%20%7Bnum1%20/%20num2%7D%22%29%0A%20%20%20%20%23%20Prepare%20for%20wrong%20number%20format%0A%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20print%28%22Numbers%20must%20be%20given%20in%20numerical%20form!%22%29%0A%20%20%20%20except%20ZeroDivisionError%3A%0A%20%20%20%20%20%20%20%20print%28%22Can't%20divide%20by%20zero!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-while True:
-    try:
-        num1 = int(input("Dividend: "))
-        if num1 == 0:
-            break
-        num2 = int(input("Divisor:   "))
-        print(f"{num1} divided by {num2} is {num1 / num2}")
-    # Prepare for wrong number format
-    except ValueError:
-        print("Numbers must be given in numerical form!")
-    except ZeroDivisionError:
-        print("Can't divide by zero!")
- ```
-
-Example execution:
-``` 
-Dividend: 5
-Divisor:   2
-5 divided by 2 is 2.5
-Dividend: 10
-Divisor:  three
-Numbers must be given in numerical form!
-Dividend: 4
-Divisor:   0
-Can't divide by zero!
-Dividend: 0
- ```
 
 It is also possible to catch all exceptions by leaving the exception to be caught completely unspecified.
 
