@@ -150,39 +150,28 @@ The difference between the periods can also be calculated as a normal deduction.
 
 <Tabs>
   <TabItem value="code" label="Code Example" default>
+    ```python 
+    from datetime import datetime
 
+    # Current date
+    today = datetime.now()
+
+    # christmas
+    christmas = datetime(2023, 12, 24)
+
+    # Times subtracted
+    sub = christmas - today
+
+    print(f"Christmas is {sub.days} days away.")
+    print(f"...or more accurately {sub.seconds} seconds.")
+    ```
   </TabItem>
   <TabItem value="Visualization" label="Visualization">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=from%20datetime%20import%20datetime%0A%0A%23%20Current%20date%0Atoday%20%3D%20datetime.now%28%29%0A%0A%23%20christmas%0Achristmas%20%3D%20datetime%282023,%2012,%2024%29%0A%0A%23%20Times%20subtracted%0Asub%20%3D%20christmas%20-%20today%0A%0Aprint%28f%22Christmas%20is%20%7Bsub.days%7D%20days%20away.%22%29%0Aprint%28f%22...or%20more%20accurately%20%7Bsub.seconds%7D%20seconds.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-from datetime import datetime
-
-# Current date
-today = datetime.now()
-
-# christmas
-christmas = datetime(2023, 12, 24)
-
-# Times subtracted
-sub = christmas - today
-
-print(f"Christmas is {sub.days} days away.")
-print(f"...or more accurately {sub.seconds} seconds.")
- ```
 
 If necessary, you can create a timedelta-olio yourself. However, the object must be accessed with an import statement. Once the object has been created, it can be used to "rotate" the datetime object, i.e. move time forward or backward:
-
-<Tabs>
-  <TabItem value="code" label="Code Example" default>
-
-  </TabItem>
-  <TabItem value="Visualization" label="Visualization">
-
-  </TabItem>
-</Tabs>
 
 ```python 
 from datetime import datetime, timedelta
