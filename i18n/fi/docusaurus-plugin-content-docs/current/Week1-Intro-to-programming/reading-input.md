@@ -1,6 +1,8 @@
 ---
 sidebar_position: 4
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Syötteiden lukeminen
 
@@ -14,27 +16,34 @@ Pythonissa voimme lukea käyttäjän tekstimuotoisen (eli yleensä näppäimist�
 
 Tarkastellaan esimerkkiä, jossa ohjelma kysyy käyttäjän nimen ja tulostaa sitten tervehdyksen:
 
-```python 
-# Kysytään nimi ja tallennetaan se muuttujaan nimi
-nimi = input("Anna nimesi: ")
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # Kysytään nimi ja tallennetaan se muuttujaan nimi
+    nimi = input("Anna nimesi: ")
 
-# Tulostetaan tervehdys
-print("Moi vaan, " + nimi + "!")
- ```
+    # Tulostetaan tervehdys
+    print("Moi vaan, " + nimi + "!")
+    ```
 
-Esimerkkisuoritus:
-```python 
-Anna nimesi: Paula Python
-Moi vaan, Paula Python!
- ```
+    Esimerkkisuoritus:
+    ``` 
+    Anna nimesi: Paula Python
+    Moi vaan, Paula Python!
+    ```
 
-Sama ohjelma suoritettuna toisella syötteellä antaa luonnollisesti erilaisen tulosteen:
+    Sama ohjelma suoritettuna toisella syötteellä antaa luonnollisesti erilaisen tulosteen:
 
-Esimerkkisuoritus:
-```python 
-Anna nimesi: Jarmo Java
-Moi vaan, Jarmo Java!
- ```
+    Esimerkkisuoritus:
+    ``` 
+    Anna nimesi: Jarmo Java
+    Moi vaan, Jarmo Java!
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Kysyt%C3%A4%C3%A4n%20nimi%20ja%20tallennetaan%20se%20muuttujaan%20nimi%0Animi%20%3D%20input%28%22Anna%20nimesi%3A%20%22%29%0A%0A%23%20Tulostetaan%20tervehdys%0Aprint%28%22Moi%20vaan,%20%22%20%2B%20nimi%20%2B%20%22!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Toisessa esimerkissä kysytään käyttäjältä erikseen etunimi, sukunimi ja puhelinnumero ja tulostetaan sitten tervehdys.
 
@@ -48,7 +57,7 @@ print("Puhelinnumerosi on " + pnro)
  ```
 
 Esimerkkisuoritus:
-```python 
+``` 
 Anna etunimi: Olli
 Anna sukunimi: Ohjelmoija
 Anna puhelinnumero: 123-456 7890
@@ -68,7 +77,7 @@ print("Lukujen summa on", (luku1 + luku2))
  ```
 
 Esimerkkisuoritus:
-```python 
+```
 Anna luku 1: 5
 Anna luku 2: 8
 Lukujen summa on 58
@@ -78,25 +87,32 @@ Merkkijonotyyppinen arvo voidaan kuitenkin muuntaa kokonaislukutyyppiseksi käyt
 
 Funktio toimii seuraavasti:
 
-```python 
-# Luku merkkijonon sisällä
-jono = "5"
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+    ```python 
+    # Luku merkkijonon sisällä
+    jono = "5"
 
-# Nyt plus-operaattori katenoi jonot uudeksi merkkijonoksi
-print(jono + jono)
+    # Nyt plus-operaattori katenoi jonot uudeksi merkkijonoksi
+    print(jono + jono)
 
-# Muunnetaan luvuksi
-luku = int(jono)
+    # Muunnetaan luvuksi
+    luku = int(jono)
 
-# Nyt plus-operaattori laskee luvut yhteen
-print(luku + luku)
- ```
+    # Nyt plus-operaattori laskee luvut yhteen
+    print(luku + luku)
+    ```
 
-Ohjelma tulostaa:
-```python 
-55
-10
- ```
+    Ohjelma tulostaa:
+    ``` 
+    55
+    10
+    ```
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Luku%20merkkijonon%20sis%C3%A4ll%C3%A4%0Ajono%20%3D%20%225%22%0A%0A%23%20Nyt%20plus-operaattori%20katenoi%20jonot%20uudeksi%20merkkijonoksi%0Aprint%28jono%20%2B%20jono%29%0A%0A%23%20Muunnetaan%20luvuksi%0Aluku%20%3D%20int%28jono%29%0A%0A%23%20Nyt%20plus-operaattori%20laskee%20luvut%20yhteen%0Aprint%28luku%20%2B%20luku%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Nyt voimme korjata edellä esitetyn ohjelman niin, että yhteenlasku luvuilla toimii oikein:
 
@@ -109,7 +125,7 @@ print("Lukujen summa on", (luku1 + luku2))
  ```
 
 Esimerkkisuoritus:
-```python 
+``` 
 Anna luku 1: 5
 Anna luku 2: 8
 Lukujen summa on 13
@@ -133,7 +149,7 @@ print("...ja pituutesi", pituus)
  ```
 
 Esimerkkisuoritus:
-```python 
+``` 
 Anna nimesi: Esko Esimerkki
 Anna ikäsi: 52
 Anna pituus: 165.5

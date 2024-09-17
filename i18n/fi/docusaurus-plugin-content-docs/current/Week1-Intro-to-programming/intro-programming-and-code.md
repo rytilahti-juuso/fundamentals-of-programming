@@ -1,6 +1,8 @@
 ---
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Johdanto: ohjelmointi ja ohjelmakoodi
 
@@ -66,6 +68,24 @@ Lupu
 Ohjelman tulostuslauseet siis suoritetaan annetussa järjestyksessä ensimmäisestä viimeiseen yksi kerrallaan. Jokainen lause kirjoitetaan omalle rivilleen. Ohjelmaan voi halutessaan sijoittaa tyhjiä rivejä sen selkeyttämiseksi, ne eivät vaikuta suoritukseen:
 
 Seuraava ohjelma tulostaa ruudulle reseptin:
+
+:::info
+
+For some code examples it is possible to view a visualization of the program generated in pythontutor.com. This allows to view the execution line by line so the logic behind the code is more easily undestandable. Some instances may open the visaulization in a new tab on pythontutor.com.
+
+Example of this is always behind a Visualization-tab like in the below example.
+
+:::
+
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 print("Yksinkertainen keitto")

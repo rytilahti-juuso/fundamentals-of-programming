@@ -1,6 +1,8 @@
 ---
 sidebar_position: 2
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Lisää tulostuslauseesta
 
@@ -67,7 +69,7 @@ print(1000 / 10 / 2)
  ```
 
 Ohjelma tulostaa
-```python 
+``` 
 23
 15
 7
@@ -89,7 +91,7 @@ print((2 + 5) * 5)
  ```
 
 Ohjelma tulostaa
-```python 
+``` 
 27
 35
  ```
@@ -102,7 +104,7 @@ print("Seitsemällä kääpiöllä on yhteensä", (7 * 2 * 2), "raajaa")
  ```
 
 Ohjelma tulostaa
-```python 
+``` 
 Lausekkeen 2 + 5 * 10 arvo on 52
 Seitsemällä kääpiöllä on yhteensä 28 raajaa
  ```
@@ -120,7 +122,7 @@ print(10 / 1.5)
  ```
 
 Ohjelma tulostaa
-```python 
+``` 
 2.5
 5.0
 6.666666666666667

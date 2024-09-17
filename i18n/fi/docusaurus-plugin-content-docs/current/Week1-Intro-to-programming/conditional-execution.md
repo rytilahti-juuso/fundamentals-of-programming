@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Ehdollinen suoritus
 
@@ -24,6 +26,15 @@ Ehtolauseessa ehdon jälkeinen sisennetty lohko suoritetaan ainoastaan silloin, 
 Tarkastellaan tällä kerralla ehdon muodostamista yhtäsuuruusoperaattorin avulla. Operaattorilla voidaan tarkastaa, onko jonkin lausekkeen arvo täsmälleen sama kuin toisen lausekkeen. Käytännössä tarkastelemme aluksi, onko jollain muuttujalla täsmälleen haluttu arvo. Operaattori koostuu kahdesta yhtäsuuruusmerkistä - tämä siksi, että se eroaa muuttujan asetusoperaattorista.
 
 Esimerkkiohjelma pyytää käyttäjää syöttämään nimen, ja tulostaa sitten viestin "Moi Pekka", jos käyttäjä antaa nimekseen merkkijonon "Pekka Python". Lopuksi tulostetaan viesti "Ohjelma loppu" riippumatta nimestä. Ehdollisesti suoritettavaan lohkoon kuuluu siis ainoastaan yksi rivi (eli rivi, jolla tulostetaan "Moi Pekka!"):
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 # Kysytään ensin nimi
@@ -51,6 +62,15 @@ Ohjelma loppu.
  ```
 
 Toinen esimerkkiohjelma pyytää käyttäjää syöttämään kaksi lukua ja tulostaa tiedon siitä, onko lukujen summa täsmälleen 10:
+
+<Tabs>
+  <TabItem value="code" label="Code Example" default>
+
+  </TabItem>
+  <TabItem value="Visualization" label="Visualization">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 # Lue luvut
