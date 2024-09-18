@@ -71,39 +71,37 @@ Seuraava ohjelma tulostaa ruudulle reseptin:
 
 :::info
 
-For some code examples it is possible to view a visualization of the program generated in pythontutor.com. This allows to view the execution line by line so the logic behind the code is more easily undestandable. Some instances may open the visaulization in a new tab on pythontutor.com.
+Suurin osa koodiesimerkeistä on myös mahdollista visualisoida, eli katsoa koodin suoritusta rivi riviltä. Visualisointia on mahdollisuus kokeilla pyhontutor.com sivustolla. Jotkut materiaalin visualisoinnit voivat avautua uuteen välilehteen pythontutor.com sivulle.
 
-Example of this is always behind a Visualization-tab like in the below example.
+Visualisaatiot löytyvät aina Visualisaatio -välilehden takaa kuten alla.
 
 :::
 
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    print("Yksinkertainen keitto")
 
+    print("Perunoita")
+    print("Vettä")
+
+    print("Ohjeet:")
+    print("Yhdistä ja lämmitä.")
+    ```
+
+    Ohjelma tulostaa:
+    ``` 
+    Yksinkertainen keitto
+    Perunoita
+    Vettä
+    Ohjeet:
+    Yhdistä ja lämmitä.
+    ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
-
+  <TabItem value="Visualization" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=print%28%22Yksinkertainen%20keitto%22%29%0A%0Aprint%28%22Perunoita%22%29%0Aprint%28%22Vett%C3%A4%22%29%0A%0Aprint%28%22Ohjeet%3A%22%29%0Aprint%28%22Yhdist%C3%A4%20ja%20l%C3%A4mmit%C3%A4.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-print("Yksinkertainen keitto")
-
-print("Perunoita")
-print("Vettä")
-
-print("Ohjeet:")
-print("Yhdistä ja lämmitä.")
- ```
-
-Ohjelma tulostaa:
-```python 
-Yksinkertainen keitto
-Perunoita
-Vettä
-Ohjeet:
-Yhdistä ja lämmitä.
- ```
 
 Käskyjen suoritusjärjestystä voidaan muuttaa erilaisilla ohjausrakenteilla. Palataan näihin kuitenkin myöhemmin.
