@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Listan iterointi
 
@@ -8,25 +11,32 @@ VIimeksi harjoiteltiin luomaan listoja, lisäämään ja muuttamaan alkioita ja 
 
 Listan alkiot voidaan luonnollisesti käydä läpi while-silmukkaa hyödyntäen, esimerkiksi seuraava ohjelma tulostaa kaikki listan lista alkiot yksitellen:
 
-```python 
-# Esimerkkilista
-lista = [5,2,3,4,10,7]
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkilista
+    lista = [5,2,3,4,10,7]
 
-indeksi = 0
-while indeksi < len(lista):
-    print(lista[indeksi])
-    indeksi += 1
- ```
+    indeksi = 0
+    while indeksi < len(lista):
+        print(lista[indeksi])
+        indeksi += 1
+    ```
 
-Ohjelma tulostaa:
-```
-5
-2
-3
-4
-10
-7
- ```
+    Ohjelma tulostaa:
+    ```
+    5
+    2
+    3
+    4
+    10
+    7
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkilista%0Alista%20%3D%20%5B5,2,3,4,10,7%5D%0A%0Aindeksi%20%3D%200%0Awhile%20indeksi%20%3C%20len%28lista%29%3A%0A%20%20%20%20print%28lista%5Bindeksi%5D%29%0A%20%20%20%20indeksi%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Listan alkioiden läpikäyntiin on kuitenkin helpompikin tapa.
 
@@ -45,86 +55,123 @@ Ideana on, että for-silmukassa kaikki alkiot poimitaan yksitellen järjestykses
 
 Tarkastellaan edellistä esimerkkiä, jossa listan alkiot tulostetaan yksitellen, nyt for-lauseella toteutettuna:
 
-```python 
-# Esimerkkilista
-lista = [5,2,3,4,10,7]
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkilista
+    lista = [5,2,3,4,10,7]
 
-for alkio in lista:
-    print(alkio)
- ```
+    for alkio in lista:
+        print(alkio)
+    ```
 
-Ohjelma tulostaa:
-```
-5
-2
-3
-4
-10
-7
- ```
+    Ohjelma tulostaa:
+    ```
+    5
+    2
+    3
+    4
+    10
+    7
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkilista%0Alista%20%3D%20%5B5,2,3,4,10,7%5D%0A%0Afor%20alkio%20in%20lista%3A%0A%20%20%20%20print%28alkio%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Huomaa, että for-lausetta käytettäessä meidän ei tarvitse erikseen huolehtia muuttujan arvon muutoksesta tai ehdon katkaisusta break-lauseella. For-lause poimii automaattisesti kaikki alkiot järjestyksessä ensimmäisestä viimeiseen ja sijoittaa ne yksitellen annettuun muuttujaan.
 
 Tarkastellaan toista esimerkkiä, jossa lasketaan kaikkien listan alkioiden summa:
 
-```python 
-# Esimerkkilista
-lista = [1, 3, 2, 4, 5, 6]
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkilista
+    lista = [1, 3, 2, 4, 5, 6]
 
-summa = 0
-for alkio in lista:
-    summa += alkio
+    summa = 0
+    for alkio in lista:
+        summa += alkio
 
-print(f"Summaksi tuli {summa}.")
- ```
+    print(f"Summaksi tuli {summa}.")
+    ```
 
-Ohjelma tulostaa:
-```
-Summaksi tuli 21.
- ```
+    Ohjelma tulostaa:
+    ```
+    Summaksi tuli 21.
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkilista%0Alista%20%3D%20%5B1,%203,%202,%204,%205,%206%5D%0A%0Asumma%20%3D%200%0Afor%20alkio%20in%20lista%3A%0A%20%20%20%20summa%20%2B%3D%20alkio%0A%0Aprint%28f%22Summaksi%20tuli%20%7Bsumma%7D.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Usein on tapana poimia alkioista vain tilanteeseen sopivat, vaikka kaikki käytäisiinkin läpi. Seuraavassa esimerkissä lasketaan parillisten alkioiden summa:
 
-```python 
-# Esimerkkilista
-lista = [1, 3, 2, 4, 5, 6]
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkilista
+    lista = [1, 3, 2, 4, 5, 6]
 
-summa = 0
-for alkio in lista:
-    # Huomoidaan nyt vain parilliset
-    if alkio % 2 == 0:
-        summa += alkio
+    summa = 0
+    for alkio in lista:
+        # Huomoidaan nyt vain parilliset
+        if alkio % 2 == 0:
+            summa += alkio
 
-print(f"Summaksi tuli {summa}.")
- ```
+    print(f"Summaksi tuli {summa}.")
+    ```
 
-Ohjelma tulostaa:
-``` 
-Summaksi tuli 12.
- ```
+    Ohjelma tulostaa:
+    ``` 
+    Summaksi tuli 12.
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkilista%0Alista%20%3D%20%5B1,%203,%202,%204,%205,%206%5D%0A%0Asumma%20%3D%200%0Afor%20alkio%20in%20lista%3A%0A%20%20%20%20%23%20Huomoidaan%20nyt%20vain%20parilliset%0A%20%20%20%20if%20alkio%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20summa%20%2B%3D%20alkio%0A%0Aprint%28f%22Summaksi%20tuli%20%7Bsumma%7D.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 
 Vielä kolmas esimerkki, jossa tulostetaan ainoastaan ne alkiot, jotka ovat jaollisia kahdella ja kolmella:
 
-```python 
-# Esimerkkilista
-lista = [1,2,3,4,5,6,7,8,9,10,11,12]
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkilista
+    lista = [1,2,3,4,5,6,7,8,9,10,11,12]
 
-for alkio in lista:
-    # Huomoidaan nyt vain parilliset
-    if alkio % 2 == 0 and alkio % 3 == 0:
-        print(alkio)
- ```
+    for alkio in lista:
+        # Huomoidaan nyt vain parilliset
+        if alkio % 2 == 0 and alkio % 3 == 0:
+            print(alkio)
+    ```
 
-Ohjelma tulostaa:
-```
-6
-12
- ```
+    Ohjelma tulostaa:
+    ```
+    6
+    12
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkilista%0Alista%20%3D%20%5B1,2,3,4,5,6,7,8,9,10,11,12%5D%0A%0Afor%20alkio%20in%20lista%3A%0A%20%20%20%20%23%20Huomoidaan%20nyt%20vain%20parilliset%0A%20%20%20%20if%20alkio%20%25%202%20%3D%3D%200%20and%20alkio%20%25%203%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20print%28alkio%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 For-lauseella muodostettavaa toistolausetta kutsutaan **definiitiksi toistoksi**. Tämä tarkoittaa, että jo lausetta kirjoitettaessa meillä on tiedossa, mitkä alkiot on tarkoitus käydä läpi. Vastaavasti while-lauseella muodostettavaa toistoa kutsutaan **indefiniitiksi toistoksi**, koska siinä toiston pituus ei  selviä automaattisesti pelkästä while-lauseen ehdosta.
 
 Definiitti toistolause toimii myös merkkijonojen kanssa. Tällöin merkkijonosta poimitaan merkit yksi kerrallaan ja sijoitetaan ne annettuun muuttujaan:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 # Esimerkkijono
@@ -198,6 +245,15 @@ Ohjelma tulostaa:
 
 Sarjalle voidaan siis antaa myös kolmas parametri, askel. Näin voidaan luoda helposti eri tavoin askeltavia sarjoja. Negatiivinen askel tuottaa suuremmasta pienempään kulkevan sarjan:
 
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 # Tulostetaan kolmen välein lukuja:
 for i in range(1, 20, 3):
@@ -227,6 +283,15 @@ Ohjelma tulostaa:
 
 Sarjasta voidaan myös muodostaa tarvittaessa lista. Tämä onnistuu funktiolla list:
 
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 lista = list(range(1, 20, 2))
 print(lista)
@@ -247,6 +312,15 @@ range(10, 0, -1)
  ```
 
 Range on hyödyllinen myös listojen kanssa esimerkiksi silloin, kun haluamme muuttaa listaa. Tarkastellaan seuraavaa esimerkkiä:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 lista = [1, 2, 3, 4]
@@ -269,6 +343,15 @@ Listan tulostus lopussa paljastaa, ettei silmukkamuuttujaan sijoitus muuta alkup
 
 Listan indekseihin voidaan kuitenkin viitata hyödyntämällä range-funktiota ja tietoa listan pituudesta. Muodostetaan siis range-funktiolla kaikki listan indeksit nollasta pituus miinus yhteen asti ja käydään ne läpi for-silmukassa:
 
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 lista = [1, 2, 3, 4]
 
@@ -290,6 +373,15 @@ Lista jälkeen: [2, 3, 4, 5]
  ```
 
 Tarkastellaan vielä toista esimerkkiä:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 lista = list(range(1,10))

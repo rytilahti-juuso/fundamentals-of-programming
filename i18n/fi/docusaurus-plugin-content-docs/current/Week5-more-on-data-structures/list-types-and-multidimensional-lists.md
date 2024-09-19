@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Erityyppiset ja moniulotteiset listat
 
@@ -18,6 +21,16 @@ jai_luokalleen = [False, False, False, True, True, False]
  ```
 
 Python sallii syntaksin puolesta erityyppisten arvojen tallentamisen samaan listaan. Tämä on kuitenkin yleensä huono idea, koska se voi johtaa erilaisiin virhetilanteisiin. Yleensä listan alkioiden pitäisi kaikkien olla saman tyyppisiä.
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 # Lista, jossa sekalaisia arvoja
 sekalaislista = [10, 20, "Matti", 4.55, True, "Liisa", False]
@@ -63,6 +76,15 @@ matriisi = [[5, 7, 3], [8, 4, 2], [6, 9, 1]]
  ```
 
 Nyt matriisia mallintavasta listasta voidaan poimia yksittäisiä alkioita viittaamalla ensin riviin ja sitten alkioon seuraavan esimerkin mukaisesti:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 matriisi = [[5, 7, 3], [8, 4, 2], [6, 9, 1]]
@@ -123,6 +145,15 @@ Mikä rivi (-1 lopettaa): -1
 
 Matriisi voidaan iteroida läpi käyttäen kahta for-silmukkaa:
 
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 matriisi = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]
 
@@ -147,6 +178,15 @@ Ohjelma tulostaa:
  ```
 
 Samoin matriisin alkioiden arvoja voidaan muuttaa hyödyntämällä range-funktiota for-silmukan kanssa:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 matriisi = [[1, 2, 3],[6, 5, 4],[9, 7, 8]]

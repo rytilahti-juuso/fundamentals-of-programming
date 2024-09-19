@@ -28,10 +28,10 @@ Tarkastellaan tällä kerralla ehdon muodostamista yhtäsuuruusoperaattorin avul
 Esimerkkiohjelma pyytää käyttäjää syöttämään nimen, ja tulostaa sitten viestin "Moi Pekka", jos käyttäjä antaa nimekseen merkkijonon "Pekka Python". Lopuksi tulostetaan viesti "Ohjelma loppu" riippumatta nimestä. Ehdollisesti suoritettavaan lohkoon kuuluu siis ainoastaan yksi rivi (eli rivi, jolla tulostetaan "Moi Pekka!"):
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
 
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
 
   </TabItem>
 </Tabs>
@@ -64,10 +64,10 @@ Ohjelma loppu.
 Toinen esimerkkiohjelma pyytää käyttäjää syöttämään kaksi lukua ja tulostaa tiedon siitä, onko lukujen summa täsmälleen 10:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
 
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
 
   </TabItem>
 </Tabs>

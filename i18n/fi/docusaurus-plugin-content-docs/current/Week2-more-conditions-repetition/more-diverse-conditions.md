@@ -11,7 +11,7 @@ Ehtolauseita voi kirjoittaa myös sisäkkäin. Tämä tarkoittaa, että voidaan 
 Esimerkki ohjelmasta, joka kysyy käyttäjältä luvun ja tulostaa tiedon siitä onko luku parillinen vai pariton. Tarkastelu parillisuudesta kuitenkin tehdään vain silloin, jos luku on suurempi kuin nolla.
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku = int(input("Anna luku: "))
 
@@ -43,7 +43,7 @@ Esimerkki ohjelmasta, joka kysyy käyttäjältä luvun ja tulostaa tiedon siitä
     Luku oli pienempi kuin nolla
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%0A%23%20Testataan%20aluksi%20onko%20luku%20suurempi%20kuin%20nolla%0Aif%20luku%20%3E%200%3A%0A%20%20%20%20%23%20Jos%20oli,%20testataan%20onko%20parillinen%20vai%20ei%0A%20%20%20%20if%20luku%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20oli%20parillinen%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20on%20pariton%22%29%0A%23%20T%C3%A4m%C3%A4%20else%20liityy%20ekaan%20if-lauseeseen%0Aelse%3A%0A%20%20%20%20print%28%22Luku%20oli%20pienempi%20kuin%20nolla%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -51,7 +51,7 @@ Esimerkki ohjelmasta, joka kysyy käyttäjältä luvun ja tulostaa tiedon siitä
 Toinen esimerkki, jossa käyttäjältä kysytään nimi ja kotipaikka. Jos kotipaikkakunta on Turku, kysytään vielä tarkentava kysymys:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     kaupunki = input("Mistä olet kotoisin? ")
 
@@ -80,7 +80,7 @@ Toinen esimerkki, jossa käyttäjältä kysytään nimi ja kotipaikka. Jos kotip
     Siellä on Särkänniemi
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=kaupunki%20%3D%20input%28%22Mist%C3%A4%20olet%20kotoisin%3F%20%22%29%0A%0Aif%20kaupunki%20%3D%3D%20%22Turku%22%3A%0A%20%20%20%20puoli%20%3D%20input%28%22Kummalta%20puolelta%20jokea%3F%20%22%29%0A%0A%20%20%20%20if%20puoli%20%3D%3D%20%22Toispualt%22%3A%0A%20%20%20%20%20%20%20%20print%28%22Siell%C3%A4%20on%20kauppatori%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Siell%C3%A4%20on%20tuomiokirkko%22%29%0Aelif%20kaupunki%20%3D%3D%20%22Tampere%22%3A%0A%20%20%20%20print%28%22Siell%C3%A4%20on%20S%C3%A4rk%C3%A4nniemi%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Se%20on%20varmaan%20ihan%20kiva%20kaupunki.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -106,7 +106,7 @@ on tosi ainoastaan silloin, kun kuppi on pöydällä **ja** siinä on kahvia. Jo
 Esimerkkejä:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku1 = 20
     luku2 = 10
@@ -138,7 +138,7 @@ Esimerkkejä:
     Toka on tosi
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku1%20%3D%2020%0Aluku2%20%3D%2010%0A%0A%23%20Molemmat%20tosia%20--%3E%20lauseke%20on%20tosi%0Aif%20luku1%20%3D%3D%2020%20and%20luku1%20%3E%20luku2%3A%0A%20%20%20%20print%28%22Eka%20on%20tosi%22%29%0A%0A%23%20Molemmat%20tosia%20--%3E%20lauseke%20on%20tosi%0Aif%20luku2%20%3C%20luku1%20and%20luku2%20!%3D%2020%3A%0A%20%20%20%20print%28%22Toka%20on%20tosi%22%29%0A%0A%23%20Nyt%20toinen%20%22alilauseke%22%20on%20ep%C3%A4tosi%20--%3E%20lauseke%20on%20ep%C3%A4tosi%0Aif%20luku1%20%3D%3D%2020%20and%20luku2%20%3D%3D%2020%3A%0A%20%20%20%20print%28%22Kolmas%20on%20tosi%22%29%0A%0A%23%20Samoin%20nyt%3A%0Aif%20luku1%20%3C%2015%20and%20luku2%20%3C%2015%3A%0A%20%20%20%20print%28%22Nelj%C3%A4s%20on%20tosi%22%29%0A%0A%23%20T%C3%A4ss%C3%A4%20molemmat%20ovat%20ep%C3%A4tosia%20--%3E%20koko%20lauseke%20on%20ep%C3%A4tosi%0Aif%20luku1%20%3C%2015%20and%20luku2%20%3C%205%3A%0A%20%20%20%20print%28%22Viides%20on%20tosi%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -152,7 +152,7 @@ on siis tosi jos joko A tai B tai molemmat ovat tosia. Jos molemmat ovat epätos
 Esimerkkejä:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku1 = 20
     luku2 = 10
@@ -181,7 +181,7 @@ Esimerkkejä:
     Kolmas on tosi
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku1%20%3D%2020%0Aluku2%20%3D%2010%0A%0A%23%20Molemmat%20tosia%20--%3E%20lauseke%20on%20tosi%0Aif%20luku1%20%3D%3D%2020%20or%20luku1%20%3E%20luku2%3A%0A%20%20%20%20print%28%22Eka%20on%20tosi%22%29%0A%0A%23%20Toinen%20tosi%20--%3E%20lauseke%20on%20tosi%0Aif%20luku1%20%3D%3D%2020%20or%20luku2%20%3D%3D%2020%3A%0A%20%20%20%20print%28%22Toinen%20on%20tosi%22%29%0A%0A%23%20Samoin%20nyt%3A%0Aif%20luku1%20%3C%2015%20or%20luku2%20%3C%2015%3A%0A%20%20%20%20print%28%22Kolmas%20on%20tosi%22%29%0A%0A%23%20T%C3%A4ss%C3%A4%20molemmat%20ovat%20ep%C3%A4tosia%20--%3E%20koko%20lauseke%20on%20ep%C3%A4tosi%0Aif%20luku1%20%3C%2015%20or%20luku2%20%3C%205%3A%0A%20%20%20%20print%28%22Nelj%C3%A4s%20on%20tosi%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -193,7 +193,7 @@ not A
 on siis tosi, jos A on epätosi, tai epätosi jos A on tosi.
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku1 = 20
     luku2 = 10
@@ -212,7 +212,7 @@ on siis tosi, jos A on epätosi, tai epätosi jos A on tosi.
     Eka on tosi
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku1%20%3D%2020%0Aluku2%20%3D%2010%0A%0A%23%20Alunperin%20ep%C3%A4tosi,%20nyt%20sis%20tosi%0Aif%20not%20luku1%20%3C%20luku2%3A%0A%20%20%20%20print%28%22Eka%20on%20tosi%22%29%0A%0A%23%20Alunperin%20tosi,%20nyt%20siis%20ep%C3%A4tosi%0Aif%20not%20luku1%20!%3D%20luku2%3A%0A%20%20%20%20print%28%22Toka%20on%20ep%C3%A4tosi%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>

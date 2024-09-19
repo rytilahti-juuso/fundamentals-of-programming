@@ -10,7 +10,7 @@ Ehtolauseen lisäksi toinen olennainen kontrollirakenne ohjelmissa on toistolaus
 Aloitetaan toistolauseeseen tutustuminen yksinkertaisen while-silmukan avulla. Seuraavassa ohjelmassa kysytään käyttäjältä lukuja ja tulostetaan niiden neliöitä (luku^2 eli luku * luku) kunnes käyttäjä syöttää nollan. Huomaa, että ohjelman suoritus siis jatkuu "ikuisesti", ellei nollaa syötetä:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     # "Ikuinen" silmukka
     while True:
@@ -39,7 +39,7 @@ Aloitetaan toistolauseeseen tutustuminen yksinkertaisen while-silmukan avulla. S
     Kiitos ja moi!
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20%22Ikuinen%22%20silmukka%0Awhile%20True%3A%0A%20%20%20%20luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%20%20%20%20%0A%20%20%20%20if%20luku%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%23%20Poistutaan%20silmukasta%0A%20%20%20%20%20%20%20%20break%0A%0A%20%20%20%20print%28%22Luvun%22,%20luku,%20%22neli%C3%B6%20on%22,%20luku%20*%20luku%29%0A%0Aprint%28%22Kiitos%20ja%20moi!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -55,7 +55,7 @@ Aluksi kirjoitamme toistolauseet käyttäen ehtolausekkeena vakioarvoa True. Tä
 Tarkastellaan vielä muutamaa esimerkkiä. Ensimmäinen tulostaa lukuja käyttäjän antamasta luvusta alkaen kasvattaen sitä joka kierroksella yhdellä. Ohjelma pysähtyy, kun on tulostettu 10 lukua:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     # Laskuri muistaa kuinka monta lukua on tulostettu
     laskuri = 0
@@ -88,7 +88,7 @@ Tarkastellaan vielä muutamaa esimerkkiä. Ensimmäinen tulostaa lukuja käyttä
     Luku on nyt 310
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Laskuri%20muistaa%20kuinka%20monta%20lukua%20on%20tulostettu%0Alaskuri%20%3D%200%0A%0Aluku%20%3D%20int%28input%28%22Anna%20aloitusarvo%3A%20%22%29%29%0A%0Awhile%20True%3A%0A%20%20%20%20print%28%22Luku%20on%20nyt%22,%20luku%29%0A%0A%20%20%20%20%23%20Kasvatetaan%20laskuria%20ja%20lukua%20yhdell%C3%A4%0A%20%20%20%20laskuri%20%3D%20laskuri%20%2B%201%0A%20%20%20%20luku%20%3D%20luku%20%2B%201%0A%0A%20%20%20%20if%20laskuri%20%3D%3D%2010%3A%0A%20%20%20%20%20%20%20%20break&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -96,7 +96,7 @@ Tarkastellaan vielä muutamaa esimerkkiä. Ensimmäinen tulostaa lukuja käyttä
 Toinen esimerkkiohjelma kysyy käyttältä yksitellen merkkijonon ja luvun. Ohjelma tulostaa luvun mukaisen määrän merkkijonoja kunnes käyttäjä syöttää tyhjän merkkijonon. Esimerkistä huomataan, että Python sallii merkkijonon kertomisen kokonaisluvulla - esimerkiksi `"A" * 3` tuottaa tulokseksi uuden merkkijonon `"AAA"`.
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     while True:
         jono = input("Anna merkkijono: ")
@@ -122,7 +122,7 @@ Toinen esimerkkiohjelma kysyy käyttältä yksitellen merkkijonon ja luvun. Ohje
     Anna merkkijono:
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20jono%20%3D%20input%28%22Anna%20merkkijono%3A%20%22%29%0A%20%20%20%20if%20jono%20%3D%3D%20%22%22%3A%0A%20%20%20%20%20%20%20%20break%0A%0A%20%20%20%20maara%20%3D%20int%28input%28%22Anna%20m%C3%A4%C3%A4r%C3%A4%3A%20%22%29%29%0A%0A%20%20%20%20print%28jono%20*%20maara%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>

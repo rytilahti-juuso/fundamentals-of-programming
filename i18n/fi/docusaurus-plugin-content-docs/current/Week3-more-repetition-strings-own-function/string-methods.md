@@ -1,6 +1,9 @@
 ---
 sidebar_position: 3
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Merkkijonometodit
 
@@ -24,40 +27,47 @@ palauttaisi 1, koska ensimmäinen osajonon "bc" esiintymä merkkijonossa "abcabc
 
 Esimerkkiohjelma kertoo, mistä indeksistä annettu sana lauseesta löytyy:
 
-```python 
-while True:
-    lause = input("Lause (tyhjä lopettaa): ")
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    while True:
+        lause = input("Lause (tyhjä lopettaa): ")
 
-    if lause == "":
-        break
+        if lause == "":
+            break
 
-    sana = input("Sana: ")
-    
-    ind = lause.find(sana)
+        sana = input("Sana: ")
+        
+        ind = lause.find(sana)
 
-    if ind < 0:
-        print("Sanaa ei löydy lauseesta")
-    else:
-        print("Sana löytyy indeksin", ind, "kohdalta")
- ```
+        if ind < 0:
+            print("Sanaa ei löydy lauseesta")
+        else:
+            print("Sana löytyy indeksin", ind, "kohdalta")
+    ```
 
-Esimerkkisuoritus:
-``` 
-Lause (tyhjä lopettaa): Moi kaikki
-Sana: kaikki
-Sana löytyy indeksin 4 kohdalta
-Lause (tyhjä lopettaa): Hei sun heissulivei
-Sana: heissulivei
-Sana löytyy indeksin 8 kohdalta
-Lause (tyhjä lopettaa): Joka toiselle kaivaa, joka toiselle ei
-Sana: joka
-Sana löytyy indeksin 22 kohdalta
-Lause (tyhjä lopettaa): Hellurei ja herkät tunteet
-Sana: JA
-Sanaa ei löydy lauseesta
-Lause (tyhjä lopettaa):
-Sana:
- ```
+    Esimerkkisuoritus:
+    ``` 
+    Lause (tyhjä lopettaa): Moi kaikki
+    Sana: kaikki
+    Sana löytyy indeksin 4 kohdalta
+    Lause (tyhjä lopettaa): Hei sun heissulivei
+    Sana: heissulivei
+    Sana löytyy indeksin 8 kohdalta
+    Lause (tyhjä lopettaa): Joka toiselle kaivaa, joka toiselle ei
+    Sana: joka
+    Sana löytyy indeksin 22 kohdalta
+    Lause (tyhjä lopettaa): Hellurei ja herkät tunteet
+    Sana: JA
+    Sanaa ei löydy lauseesta
+    Lause (tyhjä lopettaa):
+    Sana:
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20lause%20%3D%20input%28%22Lause%20%28tyhj%C3%A4%20lopettaa%29%3A%20%22%29%0A%0A%20%20%20%20if%20lause%20%3D%3D%20%22%22%3A%0A%20%20%20%20%20%20%20%20break%0A%0A%20%20%20%20sana%20%3D%20input%28%22Sana%3A%20%22%29%0A%20%20%20%20%0A%20%20%20%20ind%20%3D%20lause.find%28sana%29%0A%0A%20%20%20%20if%20ind%20%3C%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Sanaa%20ei%20l%C3%B6ydy%20lauseesta%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Sana%20l%C3%B6ytyy%20indeksin%22,%20ind,%20%22kohdalta%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Huomaa, että jos osajonon tarkan sijainnin sijasta haluamme kuitenkin ainoastaan tietää, löytyykö osajonoa ollenkaan, on helpointa käyttää operaattoria **in**. Lauseke
 
@@ -65,26 +75,33 @@ osajono `in` merkkijono
 
 palauttaa `True`, jos osajono esiintyy merkkijonossa. Seuraava esimerkki havainnollistaa sen käyttöä:
 
-```python 
-beatles = "Paul John George Ringo"
-print("Paul" in beatles)
-print("John" in beatles)
-print("Pete Best" in beatles)
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    beatles = "Paul John George Ringo"
+    print("Paul" in beatles)
+    print("John" in beatles)
+    print("Pete Best" in beatles)
 
-if "Ringo" in beatles:
-    print("On Ringokin!")
+    if "Ringo" in beatles:
+        print("On Ringokin!")
 
-if "Elton John" in beatles:
-    print("Oliko näin?")
- ```
+    if "Elton John" in beatles:
+        print("Oliko näin?")
+    ```
 
-Ohjelma tulostaa:
-```
-True
-True
-False
-On Ringokin!
- ```
+    Ohjelma tulostaa:
+    ```
+    True
+    True
+    False
+    On Ringokin!
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=beatles%20%3D%20%22Paul%20John%20George%20Ringo%22%0Aprint%28%22Paul%22%20in%20beatles%29%0Aprint%28%22John%22%20in%20beatles%29%0Aprint%28%22Pete%20Best%22%20in%20beatles%29%0A%0Aif%20%22Ringo%22%20in%20beatles%3A%0A%20%20%20%20print%28%22On%20Ringokin!%22%29%0A%0Aif%20%22Elton%20John%22%20in%20beatles%3A%0A%20%20%20%20print%28%22Oliko%20n%C3%A4in%3F%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 ## Osajonojen laskeminen
 
@@ -103,26 +120,33 @@ Huomaa, että vain kokonaiset osajonot lasketaan - esimerkiksi merkkijonosta "aa
 
 Esimerkkiohjelma laskee a-kirjaimien määrän lauseessa:
 
-```python 
-while True:
-    lause = input("Anna lause, tyhjä lopettaa: ")
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    while True:
+        lause = input("Anna lause, tyhjä lopettaa: ")
 
-    if lause == "":
-        break
+        if lause == "":
+            break
 
-    print("Lauseessa on", lause.count("a"), "a-kirjainta")
- ```
+        print("Lauseessa on", lause.count("a"), "a-kirjainta")
+    ```
 
-Esimerkkisuoritus:
-```
-Anna lause, tyhjä lopettaa: hei
-Lauseessa on 0 a-kirjainta
-Anna lause, tyhjä lopettaa: Tämä on testilause
-Lauseessa on 1 a-kirjainta
-Anna lause, tyhjä lopettaa: Lallatilaa, hauska täälä on asustaa
-Lauseessa on 9 a-kirjainta
-Anna lause, tyhjä lopettaa:
- ```
+    Esimerkkisuoritus:
+    ```
+    Anna lause, tyhjä lopettaa: hei
+    Lauseessa on 0 a-kirjainta
+    Anna lause, tyhjä lopettaa: Tämä on testilause
+    Lauseessa on 1 a-kirjainta
+    Anna lause, tyhjä lopettaa: Lallatilaa, hauska täälä on asustaa
+    Lauseessa on 9 a-kirjainta
+    Anna lause, tyhjä lopettaa:
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20lause%20%3D%20input%28%22Anna%20lause,%20tyhj%C3%A4%20lopettaa%3A%20%22%29%0A%0A%20%20%20%20if%20lause%20%3D%3D%20%22%22%3A%0A%20%20%20%20%20%20%20%20break%0A%0A%20%20%20%20print%28%22Lauseessa%20on%22,%20lause.count%28%22a%22%29,%20%22a-kirjainta%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 ## Osajonojen korvaaminen
 
@@ -138,23 +162,30 @@ palauttaisi uuden merkkijonon "xxbcxxbc".
 
 Huomaa, että metodi ei muokkaa olemassaolevaa merkkijonoa vaan luo kokonaan uuden merkkijonon. Seuraava esimerkki havainnnolistaa asiaa:
 
-```python 
-lause = "Hei vaan, onpa hauska tavata."
-lause2 = lause.replace("Hei", "Moikka")
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    lause = "Hei vaan, onpa hauska tavata."
+    lause2 = lause.replace("Hei", "Moikka")
 
-print(lause)
-print(lause2)
+    print(lause)
+    print(lause2)
 
-# replace on myös kätevä, kun halutaan "poistaa" osajonoja:
-# korvataan osajono tyhjällä merkkijonolla
-lause2 = lause2.replace("onpa", "")
+    # replace on myös kätevä, kun halutaan "poistaa" osajonoja:
+    # korvataan osajono tyhjällä merkkijonolla
+    lause2 = lause2.replace("onpa", "")
 
-print(lause2)
- ```
+    print(lause2)
+    ```
 
-Ohjelma tulostaa:
-```
-Hei vaan, onpa hauska tavata.
-Moikka vaan, onpa hauska tavata.
-Moikka vaan,  hauska tavata.
- ```
+    Ohjelma tulostaa:
+    ```
+    Hei vaan, onpa hauska tavata.
+    Moikka vaan, onpa hauska tavata.
+    Moikka vaan,  hauska tavata.
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lause%20%3D%20%22Hei%20vaan,%20onpa%20hauska%20tavata.%22%0Alause2%20%3D%20lause.replace%28%22Hei%22,%20%22Moikka%22%29%0A%0Aprint%28lause%29%0Aprint%28lause2%29%0A%0A%23%20replace%20on%20my%C3%B6s%20k%C3%A4tev%C3%A4,%20kun%20halutaan%20%22poistaa%22%20osajonoja%3A%0A%23%20korvataan%20osajono%20tyhj%C3%A4ll%C3%A4%20merkkijonolla%0Alause2%20%3D%20lause2.replace%28%22onpa%22,%20%22%22%29%0A%0Aprint%28lause2%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>

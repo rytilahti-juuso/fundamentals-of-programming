@@ -1,12 +1,24 @@
 ---
 sidebar_position: 2
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Lisää listaoperaatioita
 
 Monet merkkijonoista tutut operaatiot toimivat myös listoille. Tarkastellaan seuraavaksi eräitä käyttökelpoisia operaatioita.
 
 Koska lista on mutatoituva (eli muuttuva) tietorakenne, sen alkioiden järjestystä voidaan vaihtaa. Listan alkiot voidaan järjestää luonnolliseen järjestykseen pienimmästä suurimpaan metodin **sort** avulla:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 lottonumerot = [17, 5, 4, 22, 1, 19, 9]
@@ -23,6 +35,15 @@ Ohjelma tulostaa:
  ```
 
 Jos halutaan säilyttää alkuperäisen listan alkioiden järjestys, voidaan listasta muodostaa järjestetty kopio funktion **sorted** avulla. Huomaa ero edelliseen: sort on metodi ja sorted funktio, joten niitä kutsutaan eri tavoilla.
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 lottonumerot = [17, 5, 4, 22, 1, 19, 9]
@@ -42,6 +63,15 @@ Järjestetty: [1, 4, 5, 9, 17, 19, 22]
  ```
 
 Listan alkioiden järjestyksen saa käännettyä päinvastaiseksi metodilla reverse:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 luvut = list(range(1,5))
@@ -65,6 +95,15 @@ Ohjelma tulostaa:
 
 Listasta voidaan poimia **osalista** samalla tavalla kuin osajono merkkijonosta:
 
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
+
 ```python 
 lista = list(range(10))
 
@@ -84,6 +123,15 @@ Pala keskeltä: [4, 5, 6, 7]
  ```
 
 Koko listasta saadaan kopio (eli oikeastaan osalista alkuperäisen listan alusta loppuun) jättämällä pois sekä alku- että loppuindeksi. Tämä on usein näppärä operaatio, kun halutaan käsitellä listan alkioita mutta samalla säilyttää alkuperäiset arvot ja järjestys:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 lista = list(range(10))
@@ -106,6 +154,15 @@ Kopio:  [1000, 8, 7, 6, 5, 4, 3, 2, 1, -10000]
  ```
 
 Listan alkion esiintymää voidaan tarkastella **in**-operaattorin avulla. Alkion indeksin saa selville metodin **index** avulla. Huomaa, että vaikka **index** toimii myös merkkijonojen kanssa, jostain syystä **find**-metodi ei toimi listojen kanssa. Huomaa myös, että toisin **kuin find**-metodi, index antaa virheen jos yrität hakea sellaisen alkion esiintymää, joka ei ole listalla. Ennen **index**-metodin käyttöä on siis hyvä tarkastaa alkion esiintymä **in**-operaattorilla.
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 kakkosen_potenssit = [1, 2, 4, 8, 16, 32, 64, 128, 256]
@@ -136,6 +193,15 @@ Ohjelma tulostaa:
  ```
 
 Näppäriä funktioita listojen käsittelyyn ovat lisäksi ainakin min, max ja sum, jotka palauttavat listan pienimmän tai suurimman alkion tai listan kaikkien alkioiden summan. Seuraava esimerkki havainnollistaa funktioiden käyttöä:
+
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+
+  </TabItem>
+</Tabs>
 
 ```python 
 tulokset = [10, 4, 12, 3, 16, 7, 9, 7, 13]

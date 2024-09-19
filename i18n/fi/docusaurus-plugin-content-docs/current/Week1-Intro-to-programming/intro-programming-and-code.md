@@ -99,7 +99,7 @@ Visualisaatiot löytyvät aina Visualisaatio -välilehden takaa kuten alla.
     Yhdistä ja lämmitä.
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualisaatio">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=print%28%22Yksinkertainen%20keitto%22%29%0A%0Aprint%28%22Perunoita%22%29%0Aprint%28%22Vett%C3%A4%22%29%0A%0Aprint%28%22Ohjeet%3A%22%29%0Aprint%28%22Yhdist%C3%A4%20ja%20l%C3%A4mmit%C3%A4.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>

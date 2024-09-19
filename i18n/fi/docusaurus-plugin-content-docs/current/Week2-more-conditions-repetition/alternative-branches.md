@@ -40,7 +40,7 @@ Vaihtoehtoinen else-haara kirjoitetaan if-lausetta seuraavan lohkon perään, el
 Edellinen esimerkki toteutettuna else-haaraa hyödyntäen näyttäisi siis tältä:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku = int(input("Anna luku: "))
 
@@ -61,7 +61,7 @@ Edellinen esimerkki toteutettuna else-haaraa hyödyntäen näyttäisi siis tält
     Luku oli negatiivinen tai nolla
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%0Aif%20luku%20%3E%200%3A%0A%20%20%20%20print%28%22Luku%20oli%20positiivinen%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Luku%20oli%20negatiivinen%20tai%20nolla%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -69,7 +69,7 @@ Edellinen esimerkki toteutettuna else-haaraa hyödyntäen näyttäisi siis tält
 Vastaavasti ohjelma, joka tulostaa viestin velkojen maksusta vain tietyn nimiselle käyttäjälle toteutettaisiin esimerkiksi näin:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     nimi = input("Moi, kuka olet? ")
 
@@ -90,7 +90,7 @@ Vastaavasti ohjelma, joka tulostaa viestin velkojen maksusta vain tietyn nimisel
     Maksa velkasi!
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=nimi%20%3D%20input%28%22Moi,%20kuka%20olet%3F%20%22%29%0A%0Aif%20nimi%20%3D%3D%20%22Joni%22%3A%0A%20%20%20%20print%28%22Maksa%20velkasi!%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Ei%20velkoja.%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -114,7 +114,7 @@ else:
 Esimerkki, jossa tulostetaan tieto siitä, oliko syötetty luku positiivinen, negatiivinen vai nolla:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku = int(input("Anna luku: "))
 
@@ -142,7 +142,7 @@ Esimerkki, jossa tulostetaan tieto siitä, oliko syötetty luku positiivinen, ne
     Luku oli nolla
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%0Aif%20luku%20%3C%200%3A%0A%20%20%20%20print%28%22Luku%20oli%20negatiivinen%22%29%0Aelif%20luku%20%3E%200%3A%0A%20%20%20%20print%28%22Luku%20oli%20positiivinen%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Luku%20oli%20nolla%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -150,7 +150,7 @@ Esimerkki, jossa tulostetaan tieto siitä, oliko syötetty luku positiivinen, ne
 Toinen esimerkki, jossa tulostetaan tieto siitä kumpi annetuista luvuista oli suurempi (vai olivatko luvut yhtä suuria):
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     luku1 = int(input("Anna luku 1: "))
     luku2 = int(input("Anna luku 2: "))
@@ -182,7 +182,7 @@ Toinen esimerkki, jossa tulostetaan tieto siitä kumpi annetuista luvuista oli s
     Luvut olivat yhtä suuret
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku1%20%3D%20int%28input%28%22Anna%20luku%201%3A%20%22%29%29%0Aluku2%20%3D%20int%28input%28%22Anna%20luku%202%3A%20%22%29%29%0A%0Aif%20luku1%20%3E%20luku2%3A%0A%20%20%20%20print%28%22Luku%201%20oli%20isompi%22%29%0Aelif%20luku2%20%3E%20luku1%3A%0A%20%20%20%20print%28%22Luku%202%20oli%20isompi%22%29%0Aelse%3A%0A%20%20%20%20print%28%22Luvut%20olivat%20yht%C3%A4%20suuret%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -190,7 +190,7 @@ Toinen esimerkki, jossa tulostetaan tieto siitä kumpi annetuista luvuista oli s
 Jos else-lausetta ei ole, eikä mikään ehdoista ole tosi, ei luonnollisesti suoriteta mitään määritellyistä lohkoista:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     ohjaaja = input("Anna ohjaajan nimi: ")
 
@@ -212,7 +212,7 @@ Jos else-lausetta ei ole, eikä mikään ehdoista ole tosi, ei luonnollisesti su
     Anna ohjaajan nimi: Ere Kokkonen
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=ohjaaja%20%3D%20input%28%22Anna%20ohjaajan%20nimi%3A%20%22%29%0A%0Aif%20ohjaaja%20%3D%3D%20%22James%20Cameron%22%3A%0A%20%20%20%20print%28%22Ohjasi%20Titanicin%22%29%0Aelif%20ohjaaja%20%3D%3D%20%22Francis%20Ford%20Coppola%22%3A%0A%20%20%20%20print%28%22Ohjasi%20Kummised%C3%A4t%22%29%0Aelif%20ohjaaja%20%3D%3D%20%22Steven%20Spielberg%22%3A%0A%20%20%20%20print%28%22Ohjasikohan%20se%20ET%3An...%3F%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>

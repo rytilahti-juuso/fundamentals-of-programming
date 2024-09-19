@@ -1,6 +1,9 @@
 ---
 sidebar_position: 1
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Ehdot toistolauseessa
 
@@ -14,32 +17,39 @@ Toistolauseeseen voidaan myös kirjoittaa suoraan jokin monipuolisempi ehto, jon
 
 Esimerkiksi
 
-```python 
-leveys = 1
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    leveys = 1
 
-# Silmukkaa suoritetaan niin kauan kun ehto on tosi
-while leveys <= 8:
-    print(leveys * "X")
+    # Silmukkaa suoritetaan niin kauan kun ehto on tosi
+    while leveys <= 8:
+        print(leveys * "X")
     
-    # Muutetaan leveyttä, että silmukka päättyy joskus
-    # Lauseke 
-    # leveys += 1 
-    # on sama kuin 
-    # leveys = leveys + 1
-    leveys += 1
- ```
+        # Muutetaan leveyttä, että silmukka päättyy joskus
+        # Lauseke 
+        # leveys += 1 
+        # on sama kuin 
+        # leveys = leveys + 1
+        leveys += 1
+    ```
 
-Ohjelma tulostaa:
-```python 
-X
-XX      
-XXX     
-XXXX    
-XXXXX   
-XXXXXX  
-XXXXXXX 
-XXXXXXXX
- ```
+    Ohjelma tulostaa:
+    ``` 
+    X
+    XX      
+    XXX     
+    XXXX    
+    XXXXX   
+    XXXXXX  
+    XXXXXXX 
+    XXXXXXXX
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=leveys%20%3D%201%0A%0A%23%20Silmukkaa%20suoritetaan%20niin%20kauan%20kun%20ehto%20on%20tosi%0Awhile%20leveys%20%3C%3D%208%3A%0A%20%20%20%20print%28leveys%20*%20%22X%22%29%0A%20%20%20%20%0A%20%20%20%20%23%20Muutetaan%20leveytt%C3%A4,%20ett%C3%A4%20silmukka%20p%C3%A4%C3%A4ttyy%20joskus%0A%20%20%20%20%23%20Lauseke%20%0A%20%20%20%20%23%20leveys%20%2B%3D%201%20%0A%20%20%20%20%23%20on%20sama%20kuin%20%0A%20%20%20%20%23%20leveys%20%3D%20leveys%20%2B%201%0A%20%20%20%20leveys%20%2B%3D%201&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Yleisesti toistolausetta voidaankin kuvata seuraavan, jo viime kerralla esitetyn kuvaajan avulla:
 
@@ -47,28 +57,36 @@ Yleisesti toistolausetta voidaankin kuvata seuraavan, jo viime kerralla esitetyn
 
 Esimerkiksi silmukka, joka tulostaa kaikki luvut väliltä 1 ja 19 kahden askeleen välein voisi näyttää seuraavalta:
 
-```python 
-luku = 1
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    luku = 1
 
-while luku <= 19:
-    print(luku)
+    while luku <= 19:
+        print(luku)
 
-    luku += 2
- ```
+        luku += 2
+    ```
 
-Ohjelma tulostaa:
-```python 
-1
-3
-5
-7
-9
-11
-13
-15
-17
-19
- ```
+    Ohjelma tulostaa:
+    ``` 
+    1
+    3
+    5
+    7
+    9
+    11
+    13
+    15
+    17
+    19
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku%20%3D%201%0A%0Awhile%20luku%20%3C%3D%2019%3A%0A%20%20%20%20print%28luku%29%0A%0A%20%20%20%20luku%20%2B%3D%202&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
+
 Huomaa, että tällaisella silmukalla on kolme osaa: alustus, ehto ja muutos:
 
 ```python 
@@ -121,31 +139,45 @@ Alla on kuvattu kahdella vaihtoehtoisella tavalla ohjelma, joka tulostaa tiedon 
 
 Aluksi versio, joka käyttää "ikuista" silmukkaa ja break-lausetta:
 
-```python 
-while True:
-    luku = int(input("Anna luku: "))
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    while True:
+        luku = int(input("Anna luku: "))
 
-    if luku == 0:
-        break
-    elif luku % 2 == 0:
-        print("Luku oli parillinen")
-    else:
-        print("Luku oli pariton")
- ```
+        if luku == 0:
+            break
+        elif luku % 2 == 0:
+            print("Luku oli parillinen")
+        else:
+            print("Luku oli pariton")
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%0A%20%20%20%20if%20luku%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20break%0A%20%20%20%20elif%20luku%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20oli%20parillinen%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20oli%20pariton%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Sen jälkeen sama ohjelma, jossa ehto on kirjoitettu while-lauseeseen:
 
-```python 
-luku = int(input("Anna luku: "))
-
-while luku != 0:
-    if luku % 2 == 0:
-        print("Luku oli parillinen")
-    else:
-        print("Luku oli pariton")
-
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
     luku = int(input("Anna luku: "))
- ```
+
+    while luku != 0:
+        if luku % 2 == 0:
+            print("Luku oli parillinen")
+        else:
+            print("Luku oli pariton")
+
+        luku = int(input("Anna luku: "))
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29%0A%0Awhile%20luku%20!%3D%200%3A%0A%20%20%20%20if%20luku%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20oli%20parillinen%22%29%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20print%28%22Luku%20oli%20pariton%22%29%0A%0A%20%20%20%20luku%20%3D%20int%28input%28%22Anna%20luku%3A%20%22%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 On tilannekohtaista (ja mielipidekysymys), kumpi tapa on parempi. Jotkut ohjelmoijat suosivat aina silmukoita, joissa ehtolauseke on annettu, kun toiset taas käyttävät yleisemmin "ikuista" silmukkaa, jonka suoritus katkaistaan tarvittaessa break-lauseella.
 

@@ -17,7 +17,7 @@ Pythonissa voimme lukea käyttäjän tekstimuotoisen (eli yleensä näppäimist�
 Tarkastellaan esimerkkiä, jossa ohjelma kysyy käyttäjän nimen ja tulostaa sitten tervehdyksen:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     # Kysytään nimi ja tallennetaan se muuttujaan nimi
     nimi = input("Anna nimesi: ")
@@ -40,7 +40,7 @@ Tarkastellaan esimerkkiä, jossa ohjelma kysyy käyttäjän nimen ja tulostaa si
     Moi vaan, Jarmo Java!
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Kysyt%C3%A4%C3%A4n%20nimi%20ja%20tallennetaan%20se%20muuttujaan%20nimi%0Animi%20%3D%20input%28%22Anna%20nimesi%3A%20%22%29%0A%0A%23%20Tulostetaan%20tervehdys%0Aprint%28%22Moi%20vaan,%20%22%20%2B%20nimi%20%2B%20%22!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
@@ -88,7 +88,7 @@ Merkkijonotyyppinen arvo voidaan kuitenkin muuntaa kokonaislukutyyppiseksi käyt
 Funktio toimii seuraavasti:
 
 <Tabs>
-  <TabItem value="code" label="Code Example" default>
+  <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
     # Luku merkkijonon sisällä
     jono = "5"
@@ -109,7 +109,7 @@ Funktio toimii seuraavasti:
     10
     ```
   </TabItem>
-  <TabItem value="Visualization" label="Visualization">
+  <TabItem value="Visualisaatio" label="Visualisaatio">
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Luku%20merkkijonon%20sis%C3%A4ll%C3%A4%0Ajono%20%3D%20%225%22%0A%0A%23%20Nyt%20plus-operaattori%20katenoi%20jonot%20uudeksi%20merkkijonoksi%0Aprint%28jono%20%2B%20jono%29%0A%0A%23%20Muunnetaan%20luvuksi%0Aluku%20%3D%20int%28jono%29%0A%0A%23%20Nyt%20plus-operaattori%20laskee%20luvut%20yhteen%0Aprint%28luku%20%2B%20luku%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
