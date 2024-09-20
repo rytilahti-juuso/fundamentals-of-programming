@@ -1,6 +1,9 @@
 ---
 sidebar_position: 4
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 
 # Virhetilanteisiin varautuminen
 
@@ -38,29 +41,37 @@ Pythonissa voidaan varautua erilaisiin virheisiin **try-except** -rakenteen avul
 
 Tarkastellaan edellistä esimerkkiä niin, että ohjelmassa varaudutaan ValueError-tyyppiseen virheeseen merkkijonoa luvuksi parsiessa:
 
-```python 
-try:
-    ika = int(input("Anna ikäsi: "))
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    try:
+        ika = int(input("Anna ikäsi: "))
 
-    if ika < 0:
-        print("Ikä ei voi olla negatiivinen!")
+        if ika < 0:
+            print("Ikä ei voi olla negatiivinen!")
 
-    elif ika > 150:
-        print("En usko, että olet näin vanha.")
+        elif ika > 150:
+            print("En usko, että olet näin vanha.")
 
-except ValueError:
-    print("Ikä pitää antaa lukuna!")
- ```
+    except ValueError:
+        print("Ikä pitää antaa lukuna!")
+    ```
 
-Esimerkkisuoritus:
-```
-Anna ikäsi: kaksikymmentäkolme
-Ikä pitää antaa lukuna!
- ```
+    Esimerkkisuoritus:
+    ```
+    Anna ikäsi: kaksikymmentäkolme
+    Ikä pitää antaa lukuna!
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=try%3A%0A%20%20%20%20ika%20%3D%20int%28input%28%22Anna%20ik%C3%A4si%3A%20%22%29%29%0A%0A%20%20%20%20if%20ika%20%3C%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Ik%C3%A4%20ei%20voi%20olla%20negatiivinen!%22%29%0A%0A%20%20%20%20elif%20ika%20%3E%20150%3A%0A%20%20%20%20%20%20%20%20print%28%22En%20usko,%20ett%C3%A4%20olet%20n%C3%A4in%20vanha.%22%29%0A%0Aexcept%20ValueError%3A%0A%20%20%20%20print%28%22Ik%C3%A4%20pit%C3%A4%C3%A4%20antaa%20lukuna!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 Mikäli try-lohkossa tapahtuu virhe, ja virhettä vastaava except-lohko on määritelty, siirtyy suoritus heti virheen tapahduttua except-lohkoon.
 
 Toinen esimerkki, jossa tiedostoa lukiessa varaudutaan OSError-tyyppiseen virheeseen, esimerkiksi siihen, että tiedostoa ei löydy:
+
 ```python 
 try:
     lukulista = []
@@ -102,34 +113,41 @@ Virheet johtuvat siitä, että yritetään viitata sellaiseen alkioon, jota käs
 
 Huomaa, että useampia virheitä voidaan ottaa kiinni kirjoittamalla try-lohkon perään useampi except-lohko:
 
-```python 
-while True:
-    try:
-        luku1 = int(input("Jaettava: "))
-        if luku1 == 0:
-            break
-        luku2 = int(input("Jakaja:   "))
-        print(f"{luku1} jaettuna {luku2}:lla on {luku1 / luku2}")
-    # Varaudutaan väärän muotoiseen lukuun
-    except ValueError:
-        print("Luvut pitää antaa numeroilla!")
-    except ZeroDivisionError:
-        print("Ei voi jakaa nollalla!")
- ```
+<Tabs>
+  <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    while True:
+        try:
+            luku1 = int(input("Jaettava: "))
+            if luku1 == 0:
+                break
+            luku2 = int(input("Jakaja:   "))
+            print(f"{luku1} jaettuna {luku2}:lla on {luku1 / luku2}")
+        # Varaudutaan väärän muotoiseen lukuun
+        except ValueError:
+            print("Luvut pitää antaa numeroilla!")
+        except ZeroDivisionError:
+            print("Ei voi jakaa nollalla!")
+    ```
 
-Esimerkkisuoritus:
-``` 
-Jaettava: 5
-Jakaja:   2
-5 jaettuna 2:lla on 2.5
-Jaettava: 10
-Jakaja:   kolme
-Luvut pitää antaa numeroilla!
-Jaettava: 4
-Jakaja:   0
-Ei voi jakaa nollalla!
-Jaettava: 0
- ```
+    Esimerkkisuoritus:
+    ``` 
+    Jaettava: 5
+    Jakaja:   2
+    5 jaettuna 2:lla on 2.5
+    Jaettava: 10
+    Jakaja:   kolme
+    Luvut pitää antaa numeroilla!
+    Jaettava: 4
+    Jakaja:   0
+    Ei voi jakaa nollalla!
+    Jaettava: 0
+    ```
+  </TabItem>
+  <TabItem value="Visualisaatio" label="Visualisaatio">
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=while%20True%3A%0A%20%20%20%20try%3A%0A%20%20%20%20%20%20%20%20luku1%20%3D%20int%28input%28%22Jaettava%3A%20%22%29%29%0A%20%20%20%20%20%20%20%20if%20luku1%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20%20%20%20%20break%0A%20%20%20%20%20%20%20%20luku2%20%3D%20int%28input%28%22Jakaja%3A%20%20%20%22%29%29%0A%20%20%20%20%20%20%20%20print%28f%22%7Bluku1%7D%20jaettuna%20%7Bluku2%7D%3Alla%20on%20%7Bluku1%20/%20luku2%7D%22%29%0A%20%20%20%20%23%20Varaudutaan%20v%C3%A4%C3%A4r%C3%A4n%20muotoiseen%20lukuun%0A%20%20%20%20except%20ValueError%3A%0A%20%20%20%20%20%20%20%20print%28%22Luvut%20pit%C3%A4%C3%A4%20antaa%20numeroilla!%22%29%0A%20%20%20%20except%20ZeroDivisionError%3A%0A%20%20%20%20%20%20%20%20print%28%22Ei%20voi%20jakaa%20nollalla!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+  </TabItem>
+</Tabs>
 
 On myös mahdollista ottaa kaikki poikkeukset kiinni jättämällä kiinniotettava poikkeus kokonaan määrittelemättä.
 

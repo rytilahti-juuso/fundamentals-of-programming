@@ -1,6 +1,8 @@
 ---
 sidebar_position: 5
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Lisää Pythonin ominaisuuksia, osa 2
 

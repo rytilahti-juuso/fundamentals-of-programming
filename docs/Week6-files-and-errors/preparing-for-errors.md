@@ -42,45 +42,34 @@ Consider the previous example, where the program is prepared for an error of the
 
 <Tabs>
   <TabItem value="code" label="Code Example" default>
+    ```python 
+    try:
+        age = int(input("Enter your age: "))
 
+        if age < 0:
+            print("Age can't be negative!")
+
+        elif age > 150:
+            print("I don't believe you're this old.")
+
+    except ValueError:
+        print("Age must be given as a number!")
+    ```
+
+    Example execution:
+    ```
+    Enter your name: twentythree
+    Age must be given as a number!
+    ```
   </TabItem>
   <TabItem value="Visualization" label="Visualization">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=try%3A%0A%20%20%20%20age%20%3D%20int%28input%28%22Enter%20your%20age%3A%20%22%29%29%0A%0A%20%20%20%20if%20age%20%3C%200%3A%0A%20%20%20%20%20%20%20%20print%28%22Age%20can't%20be%20negative!%22%29%0A%0A%20%20%20%20elif%20age%20%3E%20150%3A%0A%20%20%20%20%20%20%20%20print%28%22I%20don't%20believe%20you're%20this%20old.%22%29%0A%0Aexcept%20ValueError%3A%0A%20%20%20%20print%28%22Age%20must%20be%20given%20as%20a%20number!%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-try:
-    age = int(input("Enter your age: "))
-
-    if age < 0:
-        print("Age can't be negative!")
-
-    elif age > 150:
-        print("I don't believe you're this old.")
-
-except ValueError:
-    print("Age must be given as a number!")
- ```
-
-Example execution:
-```
-Enter your name: twentythree
-Age must be given as a number!
- ```
 
 If an error occurs in the try block, and an except block corresponding to the error is defined, execution will be moved to the except block as soon as the error occurs.
 
 Another example where an OSError type error is expected when reading a file, for example, if the file is not found:
-
-<Tabs>
-  <TabItem value="code" label="Code Example" default>
-
-  </TabItem>
-  <TabItem value="Visualization" label="Visualization">
-
-  </TabItem>
-</Tabs>
 
 ```python 
 try:

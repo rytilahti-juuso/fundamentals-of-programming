@@ -166,37 +166,35 @@ Definiitti toistolause toimii myös merkkijonojen kanssa. Tällöin merkkijonost
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Esimerkkijono
+    nimi = "Pekka Python"
 
+    # Tulostetaan merkit allekkain
+    for merkki in nimi:
+        print(merkki)
+    ```
+
+    Ohjelma tulostaa:
+    ```python 
+    P
+    e
+    k
+    k
+    a
+
+    P
+    y
+    t
+    h
+    o
+    n
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Esimerkkijono%0Animi%20%3D%20%22Pekka%20Python%22%0A%0A%23%20Tulostetaan%20merkit%20allekkain%0Afor%20merkki%20in%20nimi%3A%0A%20%20%20%20print%28merkki%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-# Esimerkkijono
-nimi = "Pekka Python"
-
-# Tulostetaan merkit allekkain
-for merkki in nimi:
-    print(merkki)
- ```
-
-Ohjelma tulostaa:
-```python 
-P
-e
-k
-k
-a
-
-P
-y
-t
-h
-o
-n
- ```
 
 ## Toistolause ja range-funktio
 
@@ -247,97 +245,91 @@ Sarjalle voidaan siis antaa myös kolmas parametri, askel. Näin voidaan luoda h
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    # Tulostetaan kolmen välein lukuja:
+    for i in range(1, 20, 3):
+        print(i)
 
+
+    # Tulostetaan lukuja suuremmasta pienempään:
+    for i in range(5, 0, -1):
+        print(i)
+    ```
+
+    Ohjelma tulostaa:
+    ```
+    1
+    4
+    7
+    10
+    13
+    16
+    19
+    5
+    4
+    3
+    2
+    1
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=%23%20Tulostetaan%20kolmen%20v%C3%A4lein%20lukuja%3A%0Afor%20i%20in%20range%281,%2020,%203%29%3A%0A%20%20%20%20print%28i%29%0A%0A%0A%23%20Tulostetaan%20lukuja%20suuremmasta%20pienemp%C3%A4%C3%A4n%3A%0Afor%20i%20in%20range%285,%200,%20-1%29%3A%0A%20%20%20%20print%28i%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-# Tulostetaan kolmen välein lukuja:
-for i in range(1, 20, 3):
-    print(i)
-
-
-# Tulostetaan lukuja suuremmasta pienempään:
-for i in range(5, 0, -1):
-    print(i)
- ```
-
-Ohjelma tulostaa:
-```
-1
-4
-7
-10
-13
-16
-19
-5
-4
-3
-2
-1
- ```
 
 Sarjasta voidaan myös muodostaa tarvittaessa lista. Tämä onnistuu funktiolla list:
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    lista = list(range(1, 20, 2))
+    print(lista)
 
+    # Sarja voidaan myös tallentaa muuttujaan
+    kympista_alas = range(10, 0, -1)
+    print(kympista_alas)
+
+    lista2 = list(kympista_alas)
+    print(lista2)
+    ```
+
+    Ohjelma tulostaa:
+    ```
+    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+    range(10, 0, -1)
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lista%20%3D%20list%28range%281,%2020,%202%29%29%0Aprint%28lista%29%0A%0A%23%20Sarja%20voidaan%20my%C3%B6s%20tallentaa%20muuttujaan%0Akympista_alas%20%3D%20range%2810,%200,%20-1%29%0Aprint%28kympista_alas%29%0A%0Alista2%20%3D%20list%28kympista_alas%29%0Aprint%28lista2%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-lista = list(range(1, 20, 2))
-print(lista)
-
-# Sarja voidaan myös tallentaa muuttujaan
-kympista_alas = range(10, 0, -1)
-print(kympista_alas)
-
-lista2 = list(kympista_alas)
-print(lista2)
- ```
-
-Ohjelma tulostaa:
-```
-[1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
-range(10, 0, -1)
-[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
- ```
 
 Range on hyödyllinen myös listojen kanssa esimerkiksi silloin, kun haluamme muuttaa listaa. Tarkastellaan seuraavaa esimerkkiä:
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    lista = [1, 2, 3, 4]
 
+    print("Lista ennen:", lista)
+
+    for alkio in lista:
+        alkio += 1
+
+    print("Lista jälkeen:", lista)
+    ```
+
+    Ohjelma tulostaa:
+    ```
+    Lista ennen: [1, 2, 3, 4]
+    Lista jälkeen: [1, 2, 3, 4]
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lista%20%3D%20%5B1,%202,%203,%204%5D%0A%0Aprint%28%22Lista%20ennen%3A%22,%20lista%29%0A%0Afor%20alkio%20in%20lista%3A%0A%20%20%20%20alkio%20%2B%3D%201%0A%0Aprint%28%22Lista%20j%C3%A4lkeen%3A%22,%20lista%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-lista = [1, 2, 3, 4]
-
-print("Lista ennen:", lista)
-
-for alkio in lista:
-    alkio += 1
-
-print("Lista jälkeen:", lista)
- ```
-
-Ohjelma tulostaa:
-```
-Lista ennen: [1, 2, 3, 4]
-Lista jälkeen: [1, 2, 3, 4]
- ```
 
 Listan tulostus lopussa paljastaa, ettei silmukkamuuttujaan sijoitus muuta alkuperäistä listaa. Tämä johtuu siitä, että muuttujaan kopioidaan listan arvot yksitellen, mutta kopioinnin jälkeen muutujalla ei enää ole "yhteyttä" listaan. Silmukkamuuttujan arvon muuttaminen ei siis välity listan arvoihin mitenkään.
 
@@ -345,60 +337,56 @@ Listan indekseihin voidaan kuitenkin viitata hyödyntämällä range-funktiota j
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    lista = [1, 2, 3, 4]
 
+    print("Lista ennen:", lista)
+
+    # Jos rangesta jättää alkuparametrin pois,
+    # python olettaa, että se on nolla
+    # range(4) on siis sama kuin range(0, 4)
+    for i in range(len(lista)):
+        lista[i] += 1
+
+    print("Lista jälkeen:", lista)
+    ```
+
+    Ohjelma tulostaa:
+    ```
+    Lista ennen: [1, 2, 3, 4]
+    Lista jälkeen: [2, 3, 4, 5]
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lista%20%3D%20%5B1,%202,%203,%204%5D%0A%0Aprint%28%22Lista%20ennen%3A%22,%20lista%29%0A%0A%23%20Jos%20rangesta%20j%C3%A4tt%C3%A4%C3%A4%20alkuparametrin%20pois,%0A%23%20python%20olettaa,%20ett%C3%A4%20se%20on%20nolla%0A%23%20range%284%29%20on%20siis%20sama%20kuin%20range%280,%204%29%0Afor%20i%20in%20range%28len%28lista%29%29%3A%0A%20%20%20%20lista%5Bi%5D%20%2B%3D%201%0A%0Aprint%28%22Lista%20j%C3%A4lkeen%3A%22,%20lista%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-lista = [1, 2, 3, 4]
-
-print("Lista ennen:", lista)
-
-# Jos rangesta jättää alkuparametrin pois,
-# python olettaa, että se on nolla
-# range(4) on siis sama kuin range(0, 4)
-for i in range(len(lista)):
-    lista[i] += 1
-
-print("Lista jälkeen:", lista)
- ```
-
-Ohjelma tulostaa:
-```
-Lista ennen: [1, 2, 3, 4]
-Lista jälkeen: [2, 3, 4, 5]
- ```
 
 Tarkastellaan vielä toista esimerkkiä:
 
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
+    ```python 
+    lista = list(range(1,10))
 
+    print("Lista ennen:", lista)
+
+    # Muutetaan kaikki listan parilliset arvot
+    # negatiivisiksi
+    for i in range(len(lista)):
+        if lista[i] % 2 == 0:
+            lista[i] = -lista[i]
+
+    print("Lista jälkeen:", lista)
+    ```
+
+    Ohjelma tulostaa:
+    ```
+    Lista ennen: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    Lista jälkeen: [1, -2, 3, -4, 5, -6, 7, -8, 9]
+    ```
   </TabItem>
   <TabItem value="Visualisaatio" label="Visualisaatio">
-
+    <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lista%20%3D%20list%28range%281,10%29%29%0A%0Aprint%28%22Lista%20ennen%3A%22,%20lista%29%0A%0A%23%20Muutetaan%20kaikki%20listan%20parilliset%20arvot%0A%23%20negatiivisiksi%0Afor%20i%20in%20range%28len%28lista%29%29%3A%0A%20%20%20%20if%20lista%5Bi%5D%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20lista%5Bi%5D%20%3D%20-lista%5Bi%5D%0A%0Aprint%28%22Lista%20j%C3%A4lkeen%3A%22,%20lista%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
-
-```python 
-lista = list(range(1,10))
-
-print("Lista ennen:", lista)
-
-# Muutetaan kaikki listan parilliset arvot
-# negatiivisiksi
-for i in range(len(lista)):
-    if lista[i] % 2 == 0:
-        lista[i] = -lista[i]
-
-print("Lista jälkeen:", lista)
- ```
-
-Ohjelma tulostaa:
-```
-Lista ennen: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-Lista jälkeen: [1, -2, 3, -4, 5, -6, 7, -8, 9]
- ```
