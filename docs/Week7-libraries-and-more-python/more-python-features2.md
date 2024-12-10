@@ -170,7 +170,7 @@ Python allows you to set a default value for the formal parameters of functions.
 For example
 
 ```python 
-def write_rows(filename: str, rows: list, add_rowchanges=True):
+def write_rows(filename: str, rows: list, add_rowchanges: bool = True):
     with open(filename, "w") as file:
         for row in rows:
             if add_rowchanges:
@@ -210,7 +210,7 @@ Here's another example:
 <Tabs>
   <TabItem value="code" label="Code Example" default>
     ```python 
-    def combine_elements(list: list, spacer=","):
+    def combine_elements(list: list, spacer: str = ","):
         return spacer.join(list)
 
     list = ["Huey", "Dewey", "Louie"]

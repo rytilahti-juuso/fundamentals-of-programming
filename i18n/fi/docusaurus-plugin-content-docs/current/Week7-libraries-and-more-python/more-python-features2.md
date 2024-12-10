@@ -170,7 +170,7 @@ Pythonissa voidaan funktioiden muodollisille parametreille asettaa vakioarvo. Jo
 Esimerkiksi
 
 ```python 
-def kirjoita_rivit_tiedostoon(tnimi: str, rivit: list, lisaa_rivinvaihdot=True):
+def kirjoita_rivit_tiedostoon(tnimi: str, rivit: list, lisaa_rivinvaihdot: bool=True):
     with open(tnimi, "w") as tiedosto:
         for rivi in rivit:
             if lisaa_rivinvaihdot:
@@ -210,7 +210,7 @@ Vielä toinen esimerkki:
 <Tabs>
   <TabItem value="code" label="Koodiesimerkki" default>
     ```python 
-    def yhdista_alkiot(lista: list, valimerkki=","):
+    def yhdista_alkiot(lista: list, valimerkki: str = ","):
         return valimerkki.join(lista)
 
     lista = ["Tupu", "Hupu", "Lupu"]
