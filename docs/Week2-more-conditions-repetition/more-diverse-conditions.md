@@ -222,4 +222,4 @@ The table below shows the function of all logical operators for different operan
 | True | True | True | True | False |
 | True | False | False | True | False |
 | False | True | False | True | True |
-| True | True | True | False | True |
+| True | True | True | True | True |
