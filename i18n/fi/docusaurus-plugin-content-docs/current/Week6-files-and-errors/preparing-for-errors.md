@@ -11,9 +11,11 @@ Tiedostojen käsittely on tyypillinen esimerkki tilanteesta, joka voi johtaa vir
 
 Tällaisia virhetilanteita ei yleensä voida ohjelmallisesti korjata, mutta niihin voidaan ohjelmissa varautua. Hyvin toimiva ohjelma ei kaadu virheilmoitukseen vaikka tiedostoa ei voitaisikaan käsitellä, vaan kertoo käyttäjälle miksi ohjelmaa ei voida suorittaa ja mahdollisesti opastaa virhetilanteen korjaamiseen.
 
-Virhetilanteet eivät sinänsä ole mitenkään sidoksissa tiedostoihin, vaan erilaisia virhetilanteita voi esiintyä muutenkin. Tyypillisesti virheet liittyvät yleensä tilanteisiin, joissa ohjelmaan tulee tietoa ulkopuolelta - esimerkiksi kun luetaan käyttäjältä syöte jossain muodossa.
+Käsittelemättömät virheet voivat keskeyttää ohjelman suorituksen ja aiheuttaa saatavuusongelmia. Lisäksi ne voivat muodostaa tietoturvariskin, sillä virheilmoitukset voivat sisältää yksityiskohtaista teknistä tietoa, kuten palvelimen nimen ja version, käytetyn ohjelmointikielen ja kehyksen sekä tietoa virhetilanteista. Tällainen tieto auttaa hyökkääjää kartoittamaan järjestelmää ja kohdistamaan hyökkäyksen haavoittuvaan kohtaan.
 
-Osaan tällaisista virheistä voimme varautua tarkastelemalla syötettä ehtolauseiden avulla. Seuraava ohjelma pyytää käyttäjää syöttämään ikänsä ja tarkastaa, että ikä on annettu (todennäköisesti ainakin) oikein:
+Virhetilanteet eivät sinänsä ole mitenkään sidoksissa tiedostoihin, vaan erilaisia virhetilanteita voi esiintyä muutenkin. Virheitä voi esimerkiksi syntyä ohjelmoijan tekemien virheiden seurauksena, kuten kurssimateriaalin aiemmissa virheilmoitusesimerkeissä nähtiin. Tyypillisesti virheet liittyvät yleensä tilanteisiin, joissa ohjelmaan tulee tietoa ulkopuolelta - esimerkiksi kun luetaan käyttäjältä syöte jossain muodossa.
+
+Osaan tällaisista virheistä voimme varautua tarkastelemalla syötettä ehtolauseiden avulla. Kuten keskustelimme aiemmin kurssillamme, tätä kutsutaan syötteen validoinniksi. Seuraava ohjelma pyytää käyttäjää syöttämään ikänsä ja tarkastaa, että ikä on annettu (todennäköisesti ainakin) oikein:
 
 ```python 
 ika = int(input("Anna ikäsi: "))
@@ -163,3 +165,5 @@ except:
  ```
 
 Ohjelma tulostaa aina suorittaessa virheilmoituksen "Tiedostoa ei voi avata", koska ohjelmoija on kirjoittanut väärin muuttujan nimen kolmannella rivillä (tiedotso, kun pitäisi olla tiedosto). Koska kiinniotettavaa virhettä ei ole määritelty, Python ottaa kiinni myös ohjelmoijan virheen. Lähes aina on siis hyvä idea määritellä kiinniotettavat virheet erikseen!
+
+Haluatko tietää lisää poikkeusten käsittelystä turvallisuuden näkökulmasta? Lue https://cwe.mitre.org/data/definitions/755.html ja https://cheatsheetseries.owasp.org/cheatsheets/Error_Handling_Cheat_Sheet.html.
