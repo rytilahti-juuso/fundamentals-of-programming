@@ -216,3 +216,32 @@ Jos else-lausetta ei ole, eikä mikään ehdoista ole tosi, ei luonnollisesti su
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=ohjaaja%20%3D%20input%28%22Anna%20ohjaajan%20nimi%3A%20%22%29%0A%0Aif%20ohjaaja%20%3D%3D%20%22James%20Cameron%22%3A%0A%20%20%20%20print%28%22Ohjasi%20Titanicin%22%29%0Aelif%20ohjaaja%20%3D%3D%20%22Francis%20Ford%20Coppola%22%3A%0A%20%20%20%20print%28%22Ohjasi%20Kummised%C3%A4t%22%29%0Aelif%20ohjaaja%20%3D%3D%20%22Steven%20Spielberg%22%3A%0A%20%20%20%20print%28%22Ohjasikohan%20se%20ET%3An...%3F%22%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
+
+## Vaihtoehtoiset haarat syötteiden validoinnissa
+Kurssin alkuvaiheessa käsittelimme syötteiden validointia keinona ehkäistä odottamattomien syötteiden haitallisia vaikutuksia. Ehtolauseet ovat välineitä käyttäjän syötteen tarkistamiseen, jotta ohjelma voi toimia saadun arvon perusteella tietyllä tavalla, kuten aiemmissa esimerkeissä nähtiin. Lisäksi ohjelman tulisi tarkistaa, voidaanko syöte ylipäätään hyväksyä. Tässä on esimerkki siitä, miten vaihtoehtoisia haaroja voidaan käyttää tähän tarkoitukseen:
+
+```python 
+summa = float(input("Syötä talletettava summa (1–10 000 euroa): "))
+
+if summa <= 0:
+    print("Virheellinen summa! Tarkista syöttämäsi arvo.")
+elif summa >= 10000:
+    print("Tämä summa on liian suuri. Ole hyvä ja ota yhteyttä asiakaspalveluumme.")
+else:
+    print("Kiitos! Summa on talletettu tilillesi.")
+
+ ```
+Esimerkkisuoritukset:
+```python 
+Syötä talletettava summa (1–10 000 euroa): 1000.50
+Kiitos! Summa on talletettu tilillesi.
+---
+Syötä talletettava summa (1–10 000 euroa): -300
+Virheellinen summa! Tarkista syöttämäsi arvo.
+---
+Syötä talletettava summa (1–10 000 euroa): 10000
+Tämä summa on liian suuri. Ole hyvä ja ota yhteyttä asiakaspalveluumme.
+ ```
+
+Tässä koodissa tarkistetaan, että käyttäjän tilille tallettama summa on sallituissa rajoissa, ja ilmoitetaan hänelle, jos summa ei kelpaa. Tarvitaan kuitenkin lisää toimenpiteitä sen varmistamiseksi, ettei odottamaton syöte aiheuta ohjelman virheellistä toimintaa – esimerkiksi tilanteessa, jossa käyttäjä syöttää jotakin muuta kuin luvun. Käytettävyyden kannalta olisi myös hyvä, että ohjelma pyytää käyttäjää antamaan uuden, kelvollisen syötteen. Näemme myöhemmin kurssilla, miten tämä voidaan toteuttaa.
+
