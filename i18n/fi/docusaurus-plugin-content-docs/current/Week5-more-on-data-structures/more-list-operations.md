@@ -205,3 +205,32 @@ Näppäriä funktioita listojen käsittelyyn ovat lisäksi ainakin min, max ja s
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=tulokset%20%3D%20%5B10,%204,%2012,%203,%2016,%207,%209,%207,%2013%5D%0A%0Aprint%28%22Suurin%20arvo%3A%22,%20max%28tulokset%29%29%0Aprint%28%22Pienin%20arvo%3A%22,%20min%28tulokset%29%29%0Aprint%28%22Summa%3A%22,%20sum%28tulokset%29%29%0Aprint%28%22Keskiarvo%3A%22,%20sum%28tulokset%29%20/%20len%28tulokset%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
+
+## Sallittujen listojen käyttäminen käyttäjän syötteen validointiin
+
+Tällaisia tietorakenteita kuten listoja voidaan käyttää tekniikan nimeltä sallittujen lista (allowlist) toteuttamiseen, jolloin sovellus tarkistaa, että käyttäjän syöte on sallittujen arvojen joukossa. Tässä on esimerkki:
+
+```python 
+täytteet = ["suklaa", "mansikka", "vanilja", "pähkinä", "keksi"]
+
+while True:
+    käyttäjän_täyte = input("Valitse jäätelön täyte (suklaa, mansikka, vanilja, pähkinä, keksi): ")
+    if käyttäjän_täyte in täytteet:
+        print(f"Valitsit täytteen: {käyttäjän_täyte}")
+        break
+    else:
+        print("Virheellinen valinta, yritä uudelleen.")
+
+print("Kiitos valinnastasi! Aloitamme jäätelösi valmistuksen...")
+ ```
+Esimerkkisuoritus:
+
+```python 
+Valitse jäätelön täyte (suklaa, mansikka, vanilja, pähkinä, keksi): mango
+Virheellinen valinta, yritä uudelleen.
+Valitse jäätelön täyte (suklaa, mansikka, vanilja, pähkinä, keksi): mansikka
+Valitsit täytteen: mansikka
+Kiitos valinnastasi! Aloitamme jäätelösi valmistuksen...
+ ```
+
+Yllä olevassa koodissa tarkistamme, että käyttäjä valitsee olemassa olevan jäätelön täytteen, jotta syöte käsitellään oikein. Pyydämme valitsemaan uudelleen, jos syöte ei täytä kriteerejä. Tämä on myös käyttäjäystävällinen lähestymistapa. Täältä voit lukea lisää sallittujen listasta: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html#allowlist-vs-denylist
