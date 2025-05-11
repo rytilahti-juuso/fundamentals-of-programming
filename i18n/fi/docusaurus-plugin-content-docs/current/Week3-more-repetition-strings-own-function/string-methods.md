@@ -189,3 +189,37 @@ Huomaa, että metodi ei muokkaa olemassaolevaa merkkijonoa vaan luo kokonaan uud
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lause%20%3D%20%22Hei%20vaan,%20onpa%20hauska%20tavata.%22%0Alause2%20%3D%20lause.replace%28%22Hei%22,%20%22Moikka%22%29%0A%0Aprint%28lause%29%0Aprint%28lause2%29%0A%0A%23%20replace%20on%20my%C3%B6s%20k%C3%A4tev%C3%A4,%20kun%20halutaan%20%22poistaa%22%20osajonoja%3A%0A%23%20korvataan%20osajono%20tyhj%C3%A4ll%C3%A4%20merkkijonolla%0Alause2%20%3D%20lause2.replace%28%22onpa%22,%20%22%22%29%0A%0Aprint%28lause2%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
+
+## Merkkijono metoodit syötteen puhdistamiseen ja koodaamiseen
+
+Suositeltu lähestymistapa käyttäjän syötteelle on niin sanottu sallittujen listaus (allowlist), mikä tarkoittaa, että sovellus hyväksyy vain tietynlaisen käyttäjän syötteen, ja jos syöte ei täytä näitä kriteerejä, se hylätään. Tämä on helppo toteuttaa numeerisille arvoille tai yksittäisille sanoille, jotka käyttäjä syöttää, mutta vapaamuotoisen tekstin (esimerkiksi sosiaalisen median viestin) kohdalla prosessi on monimutkaisempi, koska käyttäjien kirjoittamien merkkien yhdistelmiä on valtavasti. Näissä tapauksissa on kaksi lähestymistapaa: syötteen puhdistaminen (eng. input sanitization) ja syötteen koodaaminen (eng. input encoding, voidaan kutsua output encoding myös). Ensimmäinen keskittyy syötteen puhdistamiseen siten, että kielletyt merkit poistetaan, kun taas jälkimmäinen esittää nämä merkit turvallisella tavalla, jotta niitä voidaan käsitellä tavallisena tekstinä. Hyvä käytäntö on hyödyntää olemassa olevia turvallisia kirjastoja tähän tarkoitukseen. Lisätietoja löydät täältä: https://go.snyk.io/rs/677-THP-415/images/Python_Cheatsheet_whitepaper.pdf ja https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html#validating-free-form-unicode-text (kuvaa myös muita mahdollisia lähestymistapoja tekstin käsittelyyn). 
+
+Havainnollistamistarkoituksessa näytämme, kuinka Pythonin funktiota string.replace, jonka juuri opimme, voidaan soveltaa syötteen puhdistamiseen ja koodaamiseen. Alla olevissa esimerkeissä keskitymme skriptitunnisteisiin, jotka, jos ne välitetään tässä muodossa HTML-koodiin, käsitellään koodina ja ne näyttävät käyttäjän antaman viestin sisältävän hälytyslaatikon. Jos käyttäjä syöttää haitallista koodia, se voidaan injektoida lailliselle verkkosivustolle ja vaarantaa turvallisuuden. Pythonissa alla esitetyt esimerkit eivät aiheuta ongelmia annetuissa käyttötapauksissa, keskitymme vain siihen, miten syöte voidaan puhdistaa ja koodata.
+
+Syötteen puhdistaminen: 
+
+```python 
+viesti = input("Kirjoita viestisi tähän: ")
+output = viesti.replace("<", "").replace(">", "")
+print(output)
+ ```
+Esimerkkisuoritus:
+
+```python
+Kirjoita viestisi tähän: <script>alert('Oops!')</script>
+scriptalert('Oops!')/script
+ ```
+Koodaus:
+
+```python 
+viesti = input("Kirjoita viestisi tähän: ")
+#Tämä on ennalta määritetty HTML-tyyli, joka koodaa < ja > niin, että selaimet käsittelevät ne tavallisena tekstinä:
+output = viesti.replace("<", "&lt;").replace(">", "&gt;")
+print(output)
+ ```
+Esimerkkisuoritus:
+
+```python
+Kirjoita viestisi tähän: <script>alert('Oops!')</script>
+&lt;script&gt;alert('Oops!')&lt;/script&gt;
+ ```
