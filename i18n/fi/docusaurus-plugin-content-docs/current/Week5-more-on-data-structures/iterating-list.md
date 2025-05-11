@@ -390,3 +390,25 @@ Tarkastellaan vielä toista esimerkkiä:
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=lista%20%3D%20list%28range%281,10%29%29%0A%0Aprint%28%22Lista%20ennen%3A%22,%20lista%29%0A%0A%23%20Muutetaan%20kaikki%20listan%20parilliset%20arvot%0A%23%20negatiivisiksi%0Afor%20i%20in%20range%28len%28lista%29%29%3A%0A%20%20%20%20if%20lista%5Bi%5D%20%25%202%20%3D%3D%200%3A%0A%20%20%20%20%20%20%20%20lista%5Bi%5D%20%3D%20-lista%5Bi%5D%0A%0Aprint%28%22Lista%20j%C3%A4lkeen%3A%22,%20lista%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
+
+Jos teet loogisen virheen ja käytät suurempaa arvoa kuin listan indeksit, for-lause aiheuttaa virheen:
+
+```python 
+kirjaimet = ["a", "b", "c", "d", "e"]
+for i in range(0, 6):
+    print(kirjaimet[i]*i)
+```
+
+Esimerkkisuoritus:
+
+```python 
+
+b
+cc
+ddd
+eeee
+ERROR!
+Traceback (most recent call last):
+  File "<main.py>", line 3, in <module>
+IndexError: list index out of range
+```
