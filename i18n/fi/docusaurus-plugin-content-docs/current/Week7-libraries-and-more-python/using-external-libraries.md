@@ -6,7 +6,7 @@ import TabItem from '@theme/TabItem';
 
 # Ulkoisten kirjastojen käyttö
 
-Ohjelmointiin kuuluu olennaisena osana se, ettei pyörää tarvitse aina keksiä itse uudestaan. Pythonin mukana tulee useita valmiita kirjastoja (eli moduuleja), joiden käyttäminen voi helpottaa omien ohjelmien kirjoittamista huomattavasti. Tämän lisäksi toiminnallisuutta voi laajentaa lataamalla käyttöön verkosta (usein ilmaisia) lisää kirjastoja. Näihin ei tämän kurssin puitteissa tutustuta sen tarkemmin, mutta hyviä esimerkkejä ovat vaikkapa koneoppimiseen tarkoitettu TensorFlow (https://www.tensorflow.org/) tai pelien tekemiseen tarkoitettu Pygame (https://www.pygame.org). Ulkoisten kirjastojen hakemisen yhteydessä on hyvä tutustua Pythonin pip-työkaluun (https://pypi.org/project/pip/), jonka avulla kirjastojen asennus on helppoa.
+Ohjelmointiin kuuluu olennaisena osana se, ettei pyörää tarvitse aina keksiä itse uudestaan. Pythonin mukana tulee useita valmiita kirjastoja (eli moduuleja), joiden käyttäminen voi helpottaa omien ohjelmien kirjoittamista huomattavasti. Tämän lisäksi toiminnallisuutta voi laajentaa lataamalla käyttöön verkosta (usein ilmaisia) lisää kirjastoja. Näihin ei tämän kurssin puitteissa tutustuta sen tarkemmin, mutta hyviä esimerkkejä ovat vaikkapa koneoppimiseen tarkoitettu TensorFlow (https://www.tensorflow.org/) tai pelien tekemiseen tarkoitettu Pygame (https://www.pygame.org). Ulkoisten kirjastojen hakemisen yhteydessä on hyvä tutustua Pythonin pip-työkaluun (https://pypi.org/project/pip/), jonka avulla kirjastojen asennus on helppoa. Valitse kirjastoja ja kehyksiä, joilla on suuri määrä latauksia, säännöllisiä ylläpitotoimia, kuten päivityksiä, sekä vankka historia tietoturvapäivityksistä. Tarkista aina esimerkiksi dokumentaatiosta tai erikoistyökalujen avulla, mitä haavoittuvuuksia kirjastoilla on.
 
 ## Satunnaisuus kirjastolla Random
 
@@ -112,3 +112,7 @@ Kätevä operaatio on myös esimerkiksi sample, joka palauttaa satunnaisen kokoi
     <iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=import%20random%0A%0Adef%20lottonumerot%28%29%3A%0A%20%20%20%20numerot%20%3D%20list%28range%281,%2040%29%29%0A%20%20%20%20%23%20Arvotaan%207%20numeron%20otos%20numeroista%0A%20%20%20%20return%20random.sample%28numerot,%207%29%0A%0Afor%20i%20in%20range%283%29%3A%0A%20%20%20%20print%28sorted%28lottonumerot%28%29%29%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
   </TabItem>
 </Tabs>
+
+## Satunnaiset arvot turvallisuuskriittisiin toimintoihin
+
+Älä koskaan käytä random-moduulia turvallisuuskriittisiin operaatioihin, kuten salasanojen salaamiseen tai CSRF-tokenien luomiseen. Tämä moduuli tuottaa ennustettavia satunnaisia arvoja, jotka eivät ole turvallisia. Haittaohjelmat voivat helposti arvata käytettävän arvon ja murtautua järjestelmään. Käytä tällaisissa tapauksissa kryptografisesti turvallisia pseudotodellisia satunnaislukugeneraattoreita (CSPRNG). Esimerkiksi Python-kirjasto nimeltä [secrets](https://docs.python.org/3/library/secrets.html). Haluatko tietää lisää aiheesta? Lue https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#secure-random-number-generation ja https://cwe.mitre.org/data/definitions/330.html.
