@@ -157,3 +157,27 @@ Nimesi on siis Esko Esimerkki
 Ikäsi on 52
 ...ja pituutesi 165.5
  ```
+
+## Syötteet: vähän turvallisuudesta
+
+Käyttäjän syöte voi olla monenlaista: tekstiä, numeerisia arvoja, ääni-, teksti- tai videotiedostoja, kuvia jne. Sovellus voi saada odottamattoman syötteen, joka voi jopa olla haitallinen. Tämä muodostaa turvallisuusriskin!
+
+Mutta mitä voi tapahtua? 
+
+1. Luvaton pääsy järjestelmään tai arkaluonteisiin tietoihin (esimerkiksi todennusprosessin tietoturva-aukkojen vuoksi) voi mahdollistaa tietojen lukemisen tietokannasta, muistista tai tiedostoista.
+2. Luvaton muokkaus (edellyttää kuitenkin ensin pääsyn järjestelmään) voi johtaa tietojen muuttamiseen tietokannassa, muistissa tai tiedostoissa sekä haitallisen koodin suorittamiseen.
+3. Saavutettavuusongelmat: sovellus voi kaatua tai jäädä loputtomaan tilaan, jos odottamattomia syötteitä ei käsitellä asianmukaisesti. Tällaisia tilanteita voidaan hyödyntää hyökkäysten aloittamiseen ja esimerkiksi luvattoman pääsyn hankkimiseen.
+
+### Syötteen validointi toimenpiteenä
+
+Sovelluksen suojaamiseksi odottamattomalta toiminnalta, joka voi jopa aiheuttaa tietoturvaongelmia, on tärkeää varmistaa, että käyttäjän syöte on hyväksyttävää. Tätä prosessia kutsutaan syötteiden validoinniksi. Validointi voidaan toteuttaa eri tavoin sen mukaan, millaista tietotyyppiä sovellus odottaa.
+
+| Semanttinen validointi eli tietojen merkityksen tarkistaminen                                             | Syntaktinen validointi eli rakenteellinen tarkistaminen                                                                                                                |
+|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Sopiva arvojoukko: hyväksyttäville arvoille asetetaan rajoituksia. Esimerkiksi kuukausien kohdalla hyväksytään vain tietyt kuukaudennimet, ja hintojen kohdalla vain arvot, jotka ovat suurempia kuin 0. | Oikea tietotyyppi: esimerkiksi ikä on kokonaisluku, hinta on liukuluku, ja etu- sekä sukunimi ovat merkkijonoja, jotka koostuvat kirjaimista ja sallituista merkeistä. |
+| Aritmeettiset vaatimukset: esimerkiksi että käyttäjä ei voi syöttaa nolla nimittäjäksi koska se ei ole sallittua.                                    | Sopiva datan pituus: esimerkiksi salasanan tulee olla vähintään 8 merkkiä pitkä, ja etu- sekä sukunimet eivät saa olla tyhjiä.                                         |
+| Kelpoisuusvaatimukset: esimerkiksi käyttäjän syöttämän sähköpostiosoitteen tulee olla olemassa oleva.                                  | Oikea muoto: esimerkiksi että sähköpostiosoiteessa pittää olla kolme pääkomponenttia: kättäjänimi, @-symboli ja verkkotunnus                                           |
+
+Pääsääntönä on, että sovellus ei saa hyväksyä syötteitä, jotka rikkovat määriteltyjä ehtoja. Tämä on helppo tehdä käyttäjän syötteille, kuten numeerisille arvoille tai yksittäisille sanoille, määrittelemällä koodissa, mitkä arvot ovat sallittuja (ns. sallittulista, eng. allowlist). Esimerkiksi vapaamuotoisen tekstin kohdalla prosessi on hieman monimutkaisempi. Jos käyttäjän syötteeseen upotettu haitallinen koodi onnistuu suorittamaan, se voi johtaa tietojen varastamiseen tai muuttamiseen. Välttääkseen mahdollisesti vaarallisten merkkien negatiivisen vaikutuksen, suositus on koodata nämä merkit. Koodaus muuntaa lähdetiedot turvalliseen muotoon ennen kuin sovellus käsittelee niitä edelleen, mikä on ratkaisevan tärkeää turvallisuuden kannalta. Esimerkki: `<script>` palautetaan muodossa `&lt;script&gt;`. Muita tapa on poistaa mahdollisesti vaarallisia merkkejä.
+
+Kurssin myöhemmässä vaiheessa tarkastelemme esimerkkejä siitä, miten käyttäjän syötteiden validointi voidaan toteuttaa käytännössä. Haluatko tietää lisää? Lue https://cwe.mitre.org/data/definitions/20.html ja https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html (OWASP (Open Web Application Security Project) on voittoa tavoittelematon organisaatio, joka keskittyy ohjelmistojen turvallisuuden parantamiseen).
