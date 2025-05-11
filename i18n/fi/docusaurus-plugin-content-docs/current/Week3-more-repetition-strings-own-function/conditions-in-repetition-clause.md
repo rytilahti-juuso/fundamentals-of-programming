@@ -131,6 +131,8 @@ Ohjelma tulostaa:
 jne...
  ```
 
+Ikuinen silmukka voi aiheuttaa merkittäviä saatavuusongelmia ohjelmistossa. Tällöin sama prosessi toistuu loputtomasti ilman päätepistettä, mikä johtaa odottamattomaan resurssien kulutukseen, kuten prosessoritehon ja muistin ylikuormittumiseen. Tämän seurauksena ohjelmisto voi hidastua huomattavasti tai lakata vastaamasta kokonaan (tunnetaan nimellä denial of service eli palvelunestotila). Tämä on myös turvallisuusriski, koska se rajoittaa pääsyä kriittisiin resursseihin ja voi olla kyberhyökkäyksen lähtökohta. Ohjelmoijan tulisi aina varmistaa, että while-silmukassa on saavutettavissa oleva lopetusehto. Haluatko tietää lisää? Lue https://cwe.mitre.org/data/definitions/835.html.
+
 ## Ehtolauseke vai True?
 
 Huomaa, että ehdon kirjoittaminen toistolauseeseen tai break-lauseen käyttäminen silmukan sisällä ovat vaihtoehtoisia tapoja - molemmilla voi toteuttaa minkä vain silmukan.
