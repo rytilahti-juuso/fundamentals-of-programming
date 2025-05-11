@@ -46,6 +46,7 @@ Toinen esimerkkiohjelma, joka pyytää käyttäjää syöttämään arvoja ja mu
     print(f"Moi, nimeni on {nimi}, asun {kaupunki}-nimisessä kaupungissa.") 
     print(f"Puhelinnumeroni on {pnro}, jos haluat jutella.")
     ```
+    * Todellisessa elämässä sinun tulisi soveltaa syötteen validointia. Esimerkiksi rajoita sallittujen merkkien joukkoa nimi ja kaupunki -kentissä ja määritä pnro:lle tietty muoto.
 
     Esimerkkisuoritus:
     ``` 
@@ -93,3 +94,61 @@ Pythonin f-merkkijonoja voidaan käyttää myös useisiin muihin tarkoituksiin, 
 </Tabs>
 
 Tarkemmin asiaa on kuvattu esimerkiksi [Pythonin dokumentaatiossa](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals).
+
+## Varo epävarmaa tulostusmuotoilua
+
+Tämä ongelma koskee enimmäkseen sellaisia kieliä kuin C ja C++, mutta katsotaanpa esimerkki siitä, miten haavoittuvan Pythonin funktion käyttö voi johtaa salaisen tiedon paljastumiseen. Pythonissa voit tulostaa tietoja seuraavalla tavalla:
+
+```python 
+print("Tervetuloa {}!".format("Pekka"))
+```
+
+Tulostaa:
+
+```python 
+Tervetuloa Pekka!
+```
+
+Tämä funktio voi tietyllä syötteellä tulostaa muun muassa sovelluksessa käytettävien muuttujien arvoja. Tämä on kuitenkin turvallisuusriski! Tässä on esimerkki. Huom! Tämä ei ole todellinen esimerkki sovelluksesta ja siihen kohdistuvasta hyökkäyksestä, vaan se on rakennettu osoittamaan, miten tietty syöte voi johtaa odottamattomaan tulosteeseen.
+
+```python 
+# Koodi on muokattu versio https://python-forum.io/thread-11421.html
+
+SALAINEN = "zu3V8XRNcRHSXZS" # Salainen avain
+
+class Tuote: # UUTTA meille: luokka.
+
+    def __init__(self, nimi, hinta): # Konstruktori
+        self.nimi = nimi
+        self.hinta = hinta
+
+kayttajan_syote = input("Syötteesi: ") # HUOM! Syöte tulee antaa tietyssä muodossa!
+
+# UUTTA meille: olio luokasta Tuote: takki, joka maksaa 45 €
+tuote_olio = Tuote("Takki", 45)
+print(kayttajan_syote.format(tuote=tuote_olio))
+```
+
+Mitä oikeastaan tapahtuu? Muuttuja kayttajan_syote ottaa käyttäjän syötteen. Jotta sovellus ei kaatuisi, syöte on annettava tietyssä muodossa. Sitten käytämme tulostusmuotoilua kirjoittaaksemme takin (tuote_olio) tiedot käyttäjän toivomalla tavalla. Muuttuja tuote korvaa paikkamerkit käyttäjän syötteessä todellisilla arvoilla tuote_olio:sta.
+
+Esimerkkisuoritus:
+
+```python 
+Syötteesi: {tuote.nimi}: {tuote.hinta} euroa.
+Takki: 45 euroa.
+```
+
+Käyttäjä syöttää syötteensä kahdella paikkamerkillä: {tuote.nimi} ja {tuote.hinta}. Sovellus korvaa ne tuote_olio:lla päästäkseen käsiksi Tuote-luokan nimi- ja hinta-arvoihin. Kaikki on nyt hyvin! Mutta mitä täällä tapahtuu?
+
+Esimerkkisuoritus:
+
+```python 
+Syötteesi: {product.__init__.__globals__[SECRET]}
+zu3V8XRNcRHSXZS
+```
+
+Käyttäjä syöttää syötteensä paikkamerkillä: {tuote.init.globals[SALAINEN]}. Sovellus korvaa sen tuote_olio:lla. Sitten kutsutaan init.globals päästäkseen käsiksi muun muassa sovelluksessa käytettäviin funktioihin ja muuttujiiin. Tämän jälkeen voimme päästä käsiksi halutun muuttujan arvoon antamalla muuttujan nimen hakasulkeissa [SALAINEN]. Nyt on ongelma!
+
+Kuinka vältämme ongelman? Vältä käyttämästä turvattomia tulostusfunktioita, erityisesti jos niiden on käsiteltävä käyttäjiltä saatuja tietoja. Tämä riippuu kuitenkin myös sovelluksen sisäisestä rakenteesta ja siitä, miten syötteitä käsitellään. Lue dokumentaatio ja varmista, että menetelmä on turvallinen käyttää. Pythonissa voit käyttää f-strings. Muista validoida kaikki syötteet ja käyttää menetelmiä, kuten puhdistusta ja koodausta (käsittelemme näitä myöhemmin kurssilla).
+
+Haluatko tietää lisää aiheestä? Lue https://owasp.org/www-community/attacks/Format_string_attack.
