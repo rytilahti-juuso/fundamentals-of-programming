@@ -45,6 +45,9 @@ Ohjelma tulostaa
 
 Edellisessä esimerkissä nähdään myös **kommentteja**. Kommentit merkitään #-merkillä. Kun koodissa tulee vastaan tämä merkki, Python ei yritä tulkita loppuriviä ollenkaan. Kommentit ovat siis ohjelmoijan tapa tehdä muistiinpanoja tai huomioita ohjelmaan.
 
+Turvallisuusvinkki: Varmista, ettei kommentteihin ole jätetty arkaluonteisia tietoja (esimerkiksi salasanoja). Jos luvattomat osapuolet pääsevät käsiksi näihin tietoihin, niitä voidaan hyödyntää hyökkäysten suunnittelussa. Tämä on erityisen riskialtista esimerkiksi HTML-koodissa, sillä käyttäjät voivat tarkastella kommentteja selaimen kehittäjätyökalujen kautta. Muista kuitenkin, että tämä on tärkeää kaikissa ohjelmointikielissä!
+Haluatko tietää lisää? Lue https://cwe.mitre.org/data/definitions/615.html (Common Weakness Enumeration (CWE) on laajasti käytetty luettelo, joka kuvaa tunnettuja sovellusturvallisuuden heikkouksia).
+
 ## Operaattorit, operandit ja lausekkeet
 
 Lausekkeessa voidaan käyttää matematiikasta tuttuja operaattoreita. Kertolaskua merkitään asteriskilla *, ja jakolaskua kauttaviivalla /.
